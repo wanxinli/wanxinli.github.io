@@ -3,19 +3,21 @@
    <head lang="en">
       <meta charset="utf-8">
       <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-      <title>Wanxin Li</title>
+      <title>Wanxin Li's Homepage</title>
       <link rel="icon" href="images/fire.png" type="image/x-icon">
       <style>
          .students-container {
          display: flex;
          flex-wrap: wrap;
          }
-         .graduate-students,
+         .graduate-students {
+         flex-basis: 50%;
+         }
          .undergraduate-students {
-         flex-basis: 25%;
+         flex-basis: 50%;
          }
          .former-students {
-         flex-basis: 50%;
+         flex-basis: 100%;
          }
          .services-container {
          display: flex;
@@ -148,9 +150,9 @@
                <li id="news"><a href = "#goto_news"><b>[News]</b></a></li>
                <li id="teaching"><a  href="#goto_teaching"><b>[Teaching]</b></a></li>
                <li id="publications"><a  href="#goto_publications"><b>[Publications]</b></a></li>
-               <li id="awards"><a href="#goto_awards"><b>[Awards]</b></a></li>
-               <li id="services"><a href="#goto_services"><b>[Services]</b></a></li>
                <li id="students"><a href="#goto_students"><b>[Students]</b></a></li>
+               <li id="services"><a href="#goto_services"><b>[Services]</b></a></li>
+               <li id="awards"><a href="#goto_awards"><b>[Awards]</b></a></li>
             </ul>
          </center>
       </div>
@@ -160,7 +162,7 @@
       <a name = "goto_about"></a>
       <h2> <font face="Arial" style="font-size: 24px" color="#5C307D">About Me</font></h2>
       <font face="Arial" style="font-size: 16px">
-         <p>Born and grew up in Shandong, China, I went to Chongqing when it came time for college. I then moved to Delaware, USA for postgrad studies. In 2022, I returned to China and joined the faculty at XJTLU in Suzhou. I love teaching, and my research interests include blockchain, cryptography and smart transportation.</p>
+         <p>Born and grew up in Shandong, China, I went to Chongqing when it came time for college. I then moved to Delaware, USA for postgrad studies. In 2022, I returned to China and joined the faculty at XJTLU in Suzhou. I love teaching, and my research interests include <b>blockchain, cryptography and smart transportation.</b></p>
          <p>📣 Calling All Motivated Students! 📣 If you have a passion for research and want to make an impact, I would love to hear from you. Please send me an email with your resume, transcript and any other supporting materials you believe will strengthen your application.</p>
          <!-- <p>I am a Lecturer in the Department of Communications and Networking at Xi'an Jiaotong-Liverpool University (XJTLU). I received my B.S. degree from Chongqing University in 2015 and my M.S. and Ph.D. degrees from the University of Delaware in 2017 and 2022, respectively. I joined the faculty at XJTLU in 2022. My research interests include Blockchain, Cryptography and Smart Transportation.</p> -->
          <!--<p>I am currently a Lecturer in the Department of Communications and Networking at Xi'an Jiaotong-Liverpool University. I received my B.S. degree from Chongqing University in 2015, and my M.S. and Ph.D. degrees from University of Delaware in 2017 and 2022, respectively. I worked as a Research Assistant on route optimization problems at Delaware Department of Transportation (DelDOT) from 2016 to 2018.</p>
@@ -202,7 +204,7 @@
                <li><a href="http://modules.xjtlu.edu.cn/mod?mod_code=SAT405" target="_blank">SAT405:</a> Master's Dissertation Project</li>
                <li><a href="http://modules.xjtlu.edu.cn/mod?mod_code=SAT301" target="_blank">SAT301:</a> Bachelor's Dissertation Project</li> -->
          </ul>
-         <p>Teaching Assistants Wanted! I am currently seeking multiple Teaching Assistants with experience in JavaScript and PHP to support the CAN402 module during every Spring semester. If you are interested in this position, please email me with your resume and transcript attached.</p>
+         <p>📣 Teaching Assistants Wanted! 📣 I am seeking multiple Teaching Assistants with experience in JavaScript and PHP to support the CAN402 module during every Spring semester. If you are interested in this position, please email me with your resume and transcript attached.</p>
       </font>
       <br>
       <!--  Publications  -->
@@ -252,15 +254,38 @@
          </ol>
       </font>
       <br>
-      <!--  Awards  -->
-      <a name = "goto_awards" ></a>
-      <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Awards</font></h2>
+      <!-- Students -->
+      <a name="goto_students"></a>
+      <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Students</font></h2>
       <font face="Arial" style="font-size: 16px">
-         <ul>
-            <li>Best Dissertation Award, IEEE Intelligent Transportation Systems Society (ITSS), 2022</li>
-            <li>Graduate Research Award, University of Delaware, 2022</li>
-            <li>Professional Development Award, University of Delaware, 2019</li>
-         </ul>
+         <div class="students-container">
+            <div class="graduate-students">
+               <font color="#E87511">Graduate Students</font>
+               <ul>
+                  <li>Yujun Deng</li>
+                  <li>Sheng Fang</li>
+                  <li>Yiran Tian</li>
+                  <li>Wenze Xiong</li>
+                  <li>Yutong Zhang</li>
+               </ul>
+            </div>
+            <div class="undergraduate-students">
+               <font color="#E87511">Undergraduate Students</font>
+               <ul>
+                  <li>Wenrui Liu</li>
+                  <li>Yuntao Nie</li>
+                  <li>Bo Wang</li>
+                  <li>Haoyu Wang</li>
+               </ul>
+            </div>
+            <div class="former-students">
+               <font color="#E87511">Alumni</font>
+               <ul>
+                  <li>Yetong Wang (BS, 2023 &rarr; Australian National University, Australia)</li>
+                  <li>Bocheng Zhang (BS, 2023 &rarr; University of Edinburgh, UK)</li>
+               </ul>
+            </div>
+         </div>
       </font>
       <br>
       <!-- Services -->
@@ -291,89 +316,20 @@
          </div>
       </font>
       <br>
-      <!--  Services  -->
-      <!-- <a name = "goto_services" ></a>
-         <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Services</font></h2>
-         <font face="Arial" style="font-size: 16px">
-         <font color="#E87511">Journal Reviewer</font>
-         <ul>
-           <li>IEEE Transactions on Vehicular Technology</li>
-           <li>IEEE Transactions on Intelligent Transportation Systems</li>
-           <li>IEEE Transactions on Network and Service Management</li>
-           <li>IEEE Internet of Things Journal</li>
-           <li>IEEE Access</li>
-           <li>Information Processing & Management</li>
-           <li>Blockchain: Research and Applications</li>
-           <li>International Journal of Cooperative Information Systems</li>
-         </ul>
-         <br>
-
-         <font color="#E87511">Conference Reviewer</font>
-         <ul>
-           <li>IEEE International Conference on Blockchain</li>
-           <li>International Congress on Blockchain and Applications</li>
-         </ul>
-         </font>
-         <br> -->
-      <!-- Students -->
-      <a name="goto_students"></a>
-      <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Students</font></h2>
+      <!--  Awards  -->
+      <a name = "goto_awards" ></a>
+      <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Awards</font></h2>
       <font face="Arial" style="font-size: 16px">
-         <div class="students-container">
-            <div class="graduate-students">
-               <font color="#E87511">Graduate Students</font>
-               <ul>
-                  <li>Yujun Deng</li>
-                  <li>Sheng Fang</li>
-                  <li>Yiran Tian</li>
-                  <li>Wenze Xiong</li>
-                  <li>Yutong Zhang</li>
-               </ul>
-            </div>
-            <div class="undergraduate-students">
-               <font color="#E87511">Undergraduate Students</font>
-               <ul>
-                  <li>Wenrui Liu</li>
-                  <li>Yuntao Nie</li>
-                  <li>Bo Wang</li>
-                  <li>Haoyu Wang</li>
-               </ul>
-            </div>
-            <div class="former-students">
-               <font color="#E87511">Former Students</font>
-               <ul>
-                  <li>Yetong Wang (BS, 2023, Australian National University)</li>
-                  <li>Bocheng Zhang (BS, 2023, University of Edinburgh)</li>
-               </ul>
-            </div>
-         </div>
-         <!--<font color="#E87511">Former Students</font>-->
+         <ul>
+            <li>Best Dissertation Award, IEEE Intelligent Transportation Systems Society (ITSS), 2022</li>
+            <li>Graduate Research Award, University of Delaware, 2022</li>
+            <li>Professional Development Award, University of Delaware, 2019</li>
+            <li>Outstanding Student Leadership Award, Chongqing University, 2015</li>
+            <li>Yangtze Power Scholarship, China Yangtze Power, 2014</li>
+         </ul>
       </font>
       <br>
       <br>
-      <!--  Students  -->
-      <!-- <a name = "goto_students" ></a>
-         <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Students</font></h2>
-         <font face="Arial" style="font-size: 16px">
-         <font color="#E87511">Gradute Students (Alphabetical)</font>
-         <ul>
-         <li>Yujun Deng</li>
-         <li>Sheng Fang</li>
-         <li>Yiran Tian</li>
-         <li>Wenze Xiong</li>
-         <li>Yutong Zhang</li>
-         </ul>
-         <br>
-         <font color="#E87511">Undergradute Students (Alphabetical)</font>
-         <ul>
-         <li>Wenrui Liu</li>
-         <li>Yuntao Nie</li>
-         <li>Bo Wang</li>
-         <li>Haoyu Wang </li>
-         <li>Yetong Wang</li>
-         <li>Bocheng Zhang</li>
-         </ul>
-         </font> -->
       <center><font face="Arial" style="font-size: 16px"><a href="#top">Back to Top</a></font></center>
       <br>
       <center><font face="Arial" style="font-size: 16px">&copy; Created by Wanxin Li. Updated in 2023.</font></center>
