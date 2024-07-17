@@ -10,6 +10,10 @@
          text-align: justify;
          text-justify: inter-word;
          } */
+         /* 初始隐藏早期新闻 */
+         .earlier-news {
+             display: none;
+         }
          body {
          /* max-width: 990px;
          min-width: 830px; */
@@ -165,6 +169,8 @@
       <h2><font face="Arial" style="font-size: 24px" color="#5C307D">News</font></h2>
       <font face="Arial" style="font-size: 16px">
          <ul>
+            <!-- 这里是当前显示的新闻 -->
+            <div id="current-news">
             <li>07/2024: Paper accepted for publication in IEEE Transactions on Computational Social Systems (TCSS).</li>
             <li>06/2024: Received third prize in the Jiangsu Blockchain Excellent Solution Competition. </li>
             <li>04/2024: Invited as a TPC member at ACM Blockchain and Internet of Things Conference (BIOTC 2024).</li>
@@ -176,7 +182,12 @@
             <li>10/2023: Invited as a reviewer for the U.S. CUTC best Ph.D. dissertations.</li>
             <li>10/2023: Paper accepted at IEEE International Conference on Blockchain (Blockchain 2023).</li>
             <li>09/2023: Paper accepted for publication in IEEE Transactions on Services Computing (TSC).</li>
-            <!-- <li>07/2023: Received the Outstanding Ph.D. Dissertation Award 2022 from IEEE TEMS.</li>
+            </div>
+            <!-- 点击显示更多新闻的超链接 -->
+            <li><a href="#" id="toggle-earlier-news">Archived.</a></li>
+            <!-- 这里是早期新闻 -->
+            <div id="earlier-news" class="earlier-news">
+            <li>07/2023: Received the Outstanding Ph.D. Dissertation Award 2022 from IEEE TEMS.</li>
             <li>05/2023: Received a grant from XJTLU Research Development Fund (RDF).</li>
             <li>04/2023: Paper accepted for publication in IEEE Transactions on Intelligent Transportation Systems (T-ITS).</li>
             <li>03/2023: Paper accepted for publication in IEEE Transactions on Network and Service Management (TNSM).</li>
@@ -187,10 +198,25 @@
             <li>08/2022: Joined Xi'an Jiaotong-Liverpool University.</li>
             <li>05/2022: Received the Graduate Research Award from the University of Delaware.</li>
             <li>03/2022: Defended my Ph.D. dissertation at the University of Delaware.</li>
-            <li>02/2022: Paper accepted at IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid 2022).</li> -->
+            <li>02/2022: Paper accepted at IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid 2022).</li>
+            </div>
          </ul>
       </font>
       <br>
+      <script>
+          // 添加点击事件来显示或隐藏早期新闻
+          document.getElementById('toggle-earlier-news').addEventListener('click', function(event) {
+              event.preventDefault(); // 阻止默认的超链接跳转行为
+              var earlierNewsDiv = document.getElementById('earlier-news');
+              if (earlierNewsDiv.style.display === 'none' || earlierNewsDiv.style.display === '') {
+                  earlierNewsDiv.style.display = 'block';
+                  this.textContent = 'Hide Archived.';
+              } else {
+                  earlierNewsDiv.style.display = 'none';
+                  this.textContent = 'Archived.';
+              }
+          });
+      </script>
       <!--  Teaching -->
       <a name = "goto_teaching" ></a>
       <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Teaching at XJTLU</font></h2>
@@ -233,11 +259,6 @@
                <li>Xuan Wang</li>
                <li>Diyang Zhu</li>
              </ul>
-             <!-- <br>
-           <li><b>Undergraduate Students (1)</b>
-             <ul>
-               <li>Jiayun Yu (BS, 2024, Georgetown University, USA)</li>
-             </ul> -->
          </ul><br>
          <font color="#E87511">Former Students</font>
          <ul>
@@ -260,16 +281,6 @@
                <li>Bocheng Zhang (BS, 2023, University of Edinburgh, UK)</li>
              </ul>
          </ul>
-         <!-- <ul>
-           <li><b>Master's Students (4):</b> Jiaxuan Li (MS, 2023-), Jiachen Wang (MS, 2023-), Zijie Wang (MS, 2023-), and Tianyou Wang (MS, 2023-)</li><br>
-           <li><b>Undergraduate Students (1):</b> Jiayun Yu (2024, MS at Georgetown University, USA)</li>
-         </ul>
-         <br>
-         <font color="#E87511">Former Students</font>
-         <ul>
-           <li><b>Master's Students (5):</b> Yujun Deng (2024), Sheng Fang (2024), Yiran Tian (2024), Wenze Xiong (2024, PhD at University of Auckland, NZ), and Yutong Zhang (2024)</li><br>
-           <li><b>Undergradute Students (6):</b> Wenrui Liu (2023, MS at University College London, UK), Yuntao Nie (2023), Bo Wang (2023), Haoyu Wang (2023), Yetong Wang (2023, MS at Australian National University, AU), and Bocheng Zhang (2023, MS at University of Edinburgh, UK)</li>
-         </ul> -->
       </font>
       <br>
       <!-- Services -->
@@ -328,27 +339,27 @@
          <ul>
             <li><b>Frontiers in Blockchain for Secure Information Sharing in Next Generation Transportation Systems</b>
               <ul>
-                <li>IEEE ITSS Best Dissertation Award 2022</li>
-                <li>IEEE TEMS Outstanding Ph.D. Dissertation Award 2022</li>
+                <font color="#228B22"><b><li>IEEE ITSS Best Dissertation Award 2022</li></b></font>
+                <font color="#228B22"><b><li>IEEE TEMS Outstanding Ph.D. Dissertation Award 2022</li></b></font>
               </ul>
          </ul>
          <br>
          <!--  Journal Papers  -->
          <font color="#E87511">Journal Papers</font> <!--(Corresponding author is marked with <b>*</b>)-->
          <ol>
-            <li><b>An Advanced Pricing Mechanism for Non-Fungible Tokens (NFTs) Based on Rarity and Market Dynamics</b><br>W. Xiong, Y. Wang, W. Li*, Y. Zhang, J. Zhang and H. Guo, <i>IEEE Transactions on Computational Social Systems</i>, 2024, in press</li>
+            <li><b>An Advanced Pricing Mechanism for Non-Fungible Tokens (NFTs) Based on Rarity and Market Dynamics</b><br>W. Xiong, Y. Wang, W. Li*, Y. Zhang, J. Zhang and H. Guo, <i>IEEE Transactions on Computational Social Systems</i>, 2024, in press <font color="#228B22"><b>(中科院2区, CCF推荐)</b></font></li>
             <br>
-            <li><b>Adaptive Traffic Prediction at the ITS Edge with Online Models and Blockchain-based Federated Learning</b> [<a href="https://doi.org/10.1109/TITS.2024.3391053" target="_blank">DOI</a> / <a href="files/Adaptive_Traffic_Prediction_at_the_ITS_Edge_With_Online_Models_and_Blockchain-Based_Federated_Learning.pdf" target="_blank">PDF</a>]<br>C. Meese, H. Chen, W. Li*, D. Lee, H. Guo, C. Shen and M. Nejad, <i>IEEE Transactions on Intelligent Transportation Systems</i>, 2024, early acces</li>
+            <li><b>Adaptive Traffic Prediction at the ITS Edge with Online Models and Blockchain-based Federated Learning</b> [<a href="https://doi.org/10.1109/TITS.2024.3391053" target="_blank">DOI</a> / <a href="files/Adaptive_Traffic_Prediction_at_the_ITS_Edge_With_Online_Models_and_Blockchain-Based_Federated_Learning.pdf" target="_blank">PDF</a>]<br>C. Meese, H. Chen, W. Li*, D. Lee, H. Guo, C. Shen and M. Nejad, <i>IEEE Transactions on Intelligent Transportation Systems</i>, 2024, early acces <font color="#228B22"><b>(中科院1区, CCF-B)</b></font></li>
             <br>
-            <li><b>B<sup>2</sup>SFL: A Bi-level Blockchained Architecture for Secure Federated Learning-based Traffic Prediction</b> [<a href="https://doi.org/10.1109/TSC.2023.3318990" target="_blank">DOI</a> / <a href="files/B2SFL_A_Bi-Level_Blockchained_Architecture_fornbspSecure_Federated_Learning-Based_TrafficnbspPrediction.pdf" target="_blank">PDF</a>]<br>H. Guo, C. Meese, W. Li*, C. Shen and M. Nejad, <i>IEEE Transactions on Services Computing</i>, vol. 16, no. 6, pp. 4360-4374, 2023</li>
+            <li><b>B<sup>2</sup>SFL: A Bi-level Blockchained Architecture for Secure Federated Learning-based Traffic Prediction</b> [<a href="https://doi.org/10.1109/TSC.2023.3318990" target="_blank">DOI</a> / <a href="files/B2SFL_A_Bi-Level_Blockchained_Architecture_fornbspSecure_Federated_Learning-Based_TrafficnbspPrediction.pdf" target="_blank">PDF</a>]<br>H. Guo, C. Meese, W. Li*, C. Shen and M. Nejad, <i>IEEE Transactions on Services Computing</i>, vol. 16, no. 6, pp. 4360-4374, 2023 <font color="#228B22"><b>(中科院1区, CCF-A)</b></font></li>
             <br>
-            <li><b>Aggregated Zero-knowledge Proof and Blockchain-Empowered Authentication for Autonomous Truck Platooning</b> [<a href="https://doi.org/10.1109/TITS.2023.3271436" target="_blank">DOI</a> / <a href="files/Aggregated_Zero-Knowledge_Proof_and_Blockchain-Empowered_Authentication_for_Autonomous_Truck_Platooning.pdf" target="_blank">PDF</a>]<br>W. Li, C. Meese, H. Hao and M. Nejad, <i>IEEE Transactions on Intelligent Transportation Systems</i>, vol. 24, no. 9, pp. 9309-9323, 2023</li>
+            <li><b>Aggregated Zero-knowledge Proof and Blockchain-Empowered Authentication for Autonomous Truck Platooning</b> [<a href="https://doi.org/10.1109/TITS.2023.3271436" target="_blank">DOI</a> / <a href="files/Aggregated_Zero-Knowledge_Proof_and_Blockchain-Empowered_Authentication_for_Autonomous_Truck_Platooning.pdf" target="_blank">PDF</a>]<br>W. Li, C. Meese, H. Hao and M. Nejad, <i>IEEE Transactions on Intelligent Transportation Systems</i>, vol. 24, no. 9, pp. 9309-9323, 2023 <font color="#228B22"><b>(中科院1区, CCF-B)</b></font></li>
             <br>
-            <li><b>A Hybrid Blockchain-Edge Architecture for Electronic Health Records Management with Attribute-based Cryptographic Mechanisms</b> [<a href="https://doi.org/10.1109/TNSM.2022.3186006" target="_blank">DOI</a> / <a href="files/A_Hybrid_Blockchain-Edge_Architecture_for_Electronic_Health_Record_Management_with_Attribute-based_Cryptographic_Mechanisms.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li*, M. Nejad and C. Shen, <i>IEEE Transactions on Network and Service Management</i>, vol. 20, no. 2, pp. 1759-1774, 2023</li>
+            <li><b>A Hybrid Blockchain-Edge Architecture for Electronic Health Records Management with Attribute-based Cryptographic Mechanisms</b> [<a href="https://doi.org/10.1109/TNSM.2022.3186006" target="_blank">DOI</a> / <a href="files/A_Hybrid_Blockchain-Edge_Architecture_for_Electronic_Health_Record_Management_with_Attribute-based_Cryptographic_Mechanisms.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li*, M. Nejad and C. Shen, <i>IEEE Transactions on Network and Service Management</i>, vol. 20, no. 2, pp. 1759-1774, 2023  <font color="#228B22"><b>(中科院2区, CCF推荐)</b></font></li>
             <br>
-            <li><b>Traffic Prediction using Artificial Intelligence: Review of Recent Advances and Emerging Opportunities</b> [<a href="https://doi.org/10.1016/j.trc.2022.103921" target="_blank">DOI</a> / <a href="files/1-s2.0-S0968090X22003345-main.pdf" target="_blank">PDF</a>]<br> M. Shaygen, C. Meese, W. Li, X. Zhao and M. Nejad, <i>Transportation Research Part C: Emerging Technologies</i>, vol. 145, 103921, 2022</li>
+            <li><b>Traffic Prediction using Artificial Intelligence: Review of Recent Advances and Emerging Opportunities</b> [<a href="https://doi.org/10.1016/j.trc.2022.103921" target="_blank">DOI</a> / <a href="files/1-s2.0-S0968090X22003345-main.pdf" target="_blank">PDF</a>]<br> M. Shaygen, C. Meese, W. Li, X. Zhao and M. Nejad, <i>Transportation Research Part C: Emerging Technologies</i>, vol. 145, 103921, 2022  <font color="#228B22"><b>(中科院1区)</b></font></li>
             <br>
-            <li><b>A Hierarchical and Location-aware Consensus Protocol for IoT-Blockchain Applications</b> [<a href="https://doi.org/10.1109/TNSM.2022.3176607" target="_blank">DOI</a> / <a href="files/TNSM3176607.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li* and M. Nejad, <i>IEEE Transactions on Network and Service Management</i>, vol. 19, no. 3, pp. 2972-2986, 2022</li>
+            <li><b>A Hierarchical and Location-aware Consensus Protocol for IoT-Blockchain Applications</b> [<a href="https://doi.org/10.1109/TNSM.2022.3176607" target="_blank">DOI</a> / <a href="files/TNSM3176607.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li* and M. Nejad, <i>IEEE Transactions on Network and Service Management</i>, vol. 19, no. 3, pp. 2972-2986, 2022  <font color="#228B22"><b>(中科院2区, CCF推荐)</b></font></li>
             <br>
             <li><b>Proof-of-Event Recording System for Autonomous Vehicles: A Blockchain-based Solution</b> [<a href="https://doi.org/10.1109/ACCESS.2020.3029512" target="_blank">DOI</a> / <a href="files/ACCESS3029512.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li, M. Nejad and C. Shen, <i>IEEE Access</i>, vol. 8, pp. 182776-182786, 2020</li>
             <br>
