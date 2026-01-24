@@ -1,177 +1,343 @@
 <!DOCTYPE html>
-<html>
-   <head lang="en">
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Wanxin Li</title>
-      <link rel="icon" href="images/fire.png" type="image/x-icon">
-      <style>
-         /* div {
-         text-align: justify;
-         text-justify: inter-word;
-         } */
-         /* 初始隐藏早期新闻 */
-         .earlier-news {
-             display: none;
-         }
-         body {
-         /* max-width: 990px;
-         min-width: 830px; */
-         margin: 0;
-         background-color: #34495E; /* Set the background color for the whole body */
-         }
-         .content-container {
-         max-width: 990px;
-         min-width: 830px;
-         margin: 15px auto; /* Add margin to the top and bottom */
-         background-color: #FFFFFF; /* Set the background color for the content container */
-         padding: 10px; /* Add padding as needed */
-         }
-         bmenu-container {
-         margin: 0;
-         padding: 20px 0 20px 0;
-         clear: both;
-         }
-         .bmenu {
-         padding: 1px;
-         margin: 0;
-         border-top: 1px solid;
-         }
-         .bmenu li {
-         font-family: Arial;
-         font-weight: normal;
-         font-size: 16px;
-         display: inline-block;
-         padding: 0px 0px 0px 20px !important;}
-         .bmenu li a {
-         display: block;
-         <!--        text-transform: uppercase; -->
-         text-align: center;
-         color: #5C307D;
-         margin: 0 !important;
-         padding: 5px 8px;
-         letter-spacing: 0px;
-         text-decoration: none;
-         border-top: 5px solid white;}
-         .bmenu li a:hover {
-         color: #E87511 !important;
-         border-top: 5px solid #E87511 !important;
-         }
-         a:link {
-         color: #3366BB;
-         background-color: transparent;
-         text-decoration: none;
-         }
-         a:visited {
-         color: #3366BB;
-         background-color: transparent;
-         text-decoration: none;
-         }
-         a:hover {
-         color: red;
-         background-color: transparent;
-         text-decoration: underline;
-         }
-         a:active {
-         color: yellow;
-         background-color: transparent;
-         text-decoration: underline;
-         }
-         @media (max-width: 767px) {
-         /* Adjust the styles for smaller screens (e.g., mobile phones) here */
-         body {
-         font-size: 14px;
-         }
-         }
-      </style>
-   </head>
-   <body data-gr-c-s-loaded="true">
-      <div class="content-container">
-      <a name="top"></a>
-      <!-- <br> -->
-      <table border="0">
-         <tr>
-            <td width="180px" rowspan="9" align="center">
-               <img src="images/New43.jpg" height="240px"></font>
-            </td>
-            <td width="20px" rowspan="9">&nbsp</td>
-            <td height="24px">
-               <font face="Arial" style="font-size: 24px"><b>Wanxin Li</b></font>
-            </td>
-         </tr>
-         <tr>
-            <td height="24px">
-               <font face="Arial" style="font-size: 16px">Assistant Professor</font>
-            </td>
-         </tr>
-         <tr>
-            <td height="24px">
-               <font face="Arial" style="font-size: 16px">Department of Communications and Networking</font>
-            </td>
-         </tr>
-         <tr>
-            <td height="24px">
-               <font face="Arial" style="font-size: 16px">Xi'an Jiaotong-Liverpool University (XJTLU)</font>
-            </td>
-         </tr>
-         <tr>
-            <td height="24px">
-               <font face="Arial" style="font-size: 16px">Suzhou Industrial Park, China</font>
-            </td>
-         </tr>
-         <tr>
-            <td height="24px">
-               <font face="Arial" style="font-size: 16px">&nbsp</font>
-            </td>
-         </tr>
-         <tr>
-            <td height="24px">
-               <font face="Arial" style="font-size: 16px" >Office: EE218, SIP Campus</font>
-            </td>
-         </tr>
-         <tr>
-            <td height="24px">
-               <font face="Arial" style="font-size: 16px" >Email: wanxin.li_at_xjtlu.edu.cn / wanxin.li_at_liverpool.ac.uk</font>
-            </td>
-         </tr>
-         <tr>
-            <td height="24px">
-               <font face="Arial" style="font-size: 16px" ><a href="https://scholar.google.com/citations?user=MFIrVhQAAAAJ&hl=en" target="_blank">Google Scholar</a> / <a href="https://www.linkedin.com/in/wanxinli" target="_blank">LinkedIn</a> / <a href="https://scholar.xjtlu.edu.cn/en/persons/WanxinLi" target="_blank">XJTLU Page</a></font>
-            </td>
-         </tr>
-      </table>
-      <br>
-      <div id="bmenu-container">
-         <center>
-            <ul class="bmenu">
-               <li id="aboutme"><a href = "#goto_about"><b>[About Me]</b></a></li>
-               <li id="news"><a href = "#goto_news"><b>[News]</b></a></li>
-               <!-- <li id="teaching"><a  href="#goto_teaching"><b>[Teaching]</b></a></li> -->
-               <li id="services"><a href="#goto_services"><b>[Services]</b></a></li>
-               <li id="publications"><a  href="#goto_publications"><b>[Publications]</b></a></li>
-               <li id="students"><a href="#goto_students"><b>[Students]</b></a></li>
-               <li id="awards"><a href="#goto_awards"><b>[Awards]</b></a></li>
-            </ul>
-         </center>
-      </div>
-      <!-- bmenu-container -->
-      <br>
-      <!--  About Me  -->
-      <a name = "goto_about"></a>
-      <h2> <font face="Arial" style="font-size: 24px" color="#5C307D">About Me</font></h2>
-      <font face="Arial" style="font-size: 16px">
-         <p>Hello! I am currently an assistant professor in the Department of Communications and Networking at XJTLU. My research areas include blockchain technology, federated learning, and security & privacy. Before XJTLU, I received my doctoral & master's degrees from the University of Delaware in the US and my bachelor's degree from Chongqing University in China. I also hold a postgraduate certificate in Education from the University of Liverpool and a fellowship from the Higher Education Academy in the UK. In my free hours, I enjoy hip-hop music and a few vintage collections.</p>
-         <!-- <p>李万鑫博士，西交利物浦大学智能工程学院助理教授、博士生导师、英国高等教育学会会士、江苏省青年科技人才托举工程获得者。本科毕业于重庆大学，并在特拉华大学获得硕士和博士学位。致力于<b>区块链技术、分布式人工智能、数据安全、隐私保护</b>等方向研究。发表期刊和会议论文三十余篇，谷歌学术引用过千次。曾获IEEE ITSS（智能交通系统协会）最佳博士论文奖、IEEE TEMS（技术与工程管理协会）杰出博士论文奖、苏州市自然科学优秀学术论文奖。指导西浦学生团队获得江苏省区块链优秀解决方案竞赛三等奖、Web3.0创新大赛香港赛区三等奖。长期担任TIFS、TDSC等期刊审稿人。</p> -->
-         <!-- <p><b>Accepting Ph.D. Students.</b> Please email me with your resume, transcript, and any other supporting materials you believe will strengthen your application. <a href="files/FOSA2406034_Wanxin Li_SAT.pdf" target="_blank">Click here to find the program and funding information.</a></p> -->
-      </font>
-      <br>
-      <!--  News  -->
-      <a name = "goto_news"></a>
-      <h2><font face="Arial" style="font-size: 24px" color="#5C307D">News</font></h2>
-      <font face="Arial" style="font-size: 16px">
-         <ul>
-            <!-- 这里是当前显示的新闻 -->
-            <div id="current-news">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanxin Li</title>
+    <link rel="icon" href="images/fire.png" type="image/x-icon">
+
+    <link href="https://fonts.loli.net/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* 配色方案 */
+            --bg-color: #F9F7F2;
+            --text-main: #2C2C2C;
+            --text-muted: #555555;
+            --accent: #8C7851;
+            --border-color: #E2DFD5;
+            --link-hover: #C5A059;
+            --award-red: #D70040;
+            --stat-green: #228B22;
+
+            /* 定义统一的导航栏高度 */
+            --nav-height: 70px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        /* 统一板块间距与导航跳转位置 */
+        section {
+            scroll-margin-top: 120px;
+            margin-bottom: 80px;
+        }
+
+        /* Header */
+        .profile-header {
+            display: flex;
+            align-items: stretch;
+            gap: 50px;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .profile-photo img {
+            width: 180px;
+            height: 240px;
+            object-fit: cover;
+            box-shadow: 12px 12px 0px var(--border-color);
+            display: block;
+        }
+
+        .header-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+
+        .header-info h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .header-info .sub-title {
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .contact-box {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .social-links {
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Navigation */
+        #nav-container {
+            position: sticky;
+            top: 0;
+            background-color: rgba(249, 247, 242, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+            margin: 0 -40px 60px -40px;
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .bmenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .bmenu li a {
+            color: var(--text-main);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .bmenu li a:hover { color: var(--accent); }
+
+        /* Typography */
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            padding-top: 10px;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin-top: 10px;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--accent);
+            font-size: 1.4rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        p { text-align: justify; margin-bottom: 20px; }
+        a { color: #3366BB; text-decoration: none; transition: 0.3s; }
+        a:hover { color: var(--link-hover); text-decoration: underline; }
+
+        ul, ol { padding-left: 20px; }
+        li { margin-bottom: 12px; }
+
+        .pub-title { font-weight: bold; color: var(--text-main); }
+        .award-tag { color: var(--award-red); font-weight: normal; }
+        .stat-tag { color: var(--stat-green); font-weight: bold; font-size: 0.9rem; }
+
+        .earlier-news { display: none; background: #F0EEE7; padding: 20px; margin-top: 20px; border-radius: 4px; }
+        #toggle-earlier-news { display: inline-block; font-weight: bold; color: var(--accent); cursor: pointer; text-decoration: underline; margin-top: 10px; }
+
+        /* === Mood Scroll Section === */
+        .mood-section { position: relative; }
+
+        .mood-scroll-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .mood-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding-bottom: 20px;
+            scroll-behavior: smooth;
+            width: 100%;
+            /* 隐藏原生滚动条 */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .mood-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .mood-item {
+            flex: 0 0 280px;
+            aspect-ratio: 4 / 5;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .mood-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: grayscale(20%) sepia(10%);
+            transition: transform 0.8s ease, filter 0.5s ease;
+        }
+        .mood-item:hover img { transform: scale(1.05); filter: grayscale(0%) sepia(0%); }
+
+        .mood-placeholder {
+            flex: 0 0 280px;
+            aspect-ratio: 4 / 5;
+            background-color: transparent;
+            border: 2px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* 滚动箭头样式 */
+        .scroll-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 24px;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            user-select: none;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .scroll-arrow:hover {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .arrow-left { left: 10px; }
+        .arrow-right { right: 10px; }
+
+        footer {
+            margin-top: 20px;
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .profile-header { flex-direction: column; align-items: center; text-align: center; }
+            .profile-photo img { width: 150px; height: 200px; }
+            .bmenu { gap: 15px; flex-wrap: wrap; }
+            .mood-item, .mood-placeholder { flex: 0 0 240px; }
+            section { scroll-margin-top: 160px; }
+            /* 手机端隐藏箭头，直接触摸滑动 */
+            .scroll-arrow { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="content-container">
+    <a name="top"></a>
+
+    <header class="profile-header">
+        <div class="profile-photo">
+            <img src="images/New43.jpg" alt="Wanxin Li">
+        </div>
+        <div class="header-info">
+            <div>
+                <h1>Wanxin Li</h1>
+                <div class="sub-title">Assistant Professor</div>
+                <div class="contact-box">
+                    Department of Communications and Networking<br>
+                    Xi'an Jiaotong-Liverpool University (XJTLU)<br>
+                    Suzhou Industrial Park, China<br>
+                    Office: EE218, SIP Campus<br>
+                    Email: wanxin.li_at_xjtlu.edu.cn / wanxin.li_at_liverpool.ac.uk
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=MFIrVhQAAAAJ&hl=en" target="_blank">Google Scholar</a> /
+                <a href="https://www.linkedin.com/in/wanxinli" target="_blank">LinkedIn</a> /
+                <a href="https://scholar.xjtlu.edu.cn/en/persons/WanxinLi" target="_blank">XJTLU Page</a>
+            </div>
+        </div>
+    </header>
+
+    <nav id="nav-container">
+        <ul class="bmenu">
+            <li><a href="#goto_about">About</a></li>
+            <li><a href="#goto_news">News</a></li>
+            <li><a href="#goto_services">Services</a></li>
+            <li><a href="#goto_publications">Publications</a></li>
+            <li><a href="#goto_students">Students</a></li>
+            <li><a href="#goto_awards">Awards</a></li>
+            <li><a href="#goto_explore">Explore</a></li>
+        </ul>
+    </nav>
+
+    <section id="goto_about">
+        <h2>About Me</h2>
+        <p>Hello! I am currently an assistant professor in the Department of Communications and Networking at XJTLU. My research areas include blockchain technology, federated learning, and security & privacy. Before XJTLU, I received my doctoral & master's degrees from the University of Delaware in the US and my bachelor's degree from Chongqing University in China. I also hold a postgraduate certificate in Education from the University of Liverpool and a fellowship from the Higher Education Academy in the UK. In my free hours, I enjoy hip-hop music and a few vintage collections.</p>
+    </section>
+
+    <section id="goto_news">
+        <h2>News</h2>
+        <ul>
             <li>12/2025: Paper accepted for publication in Cybersecurity. </li>
             <li>10/2025: Paper accepted for publication in IEEE Transactions on Network and Service Management (TNSM).</li>
             <li>09/2025: Paper accepted for publication in IEEE International Conference on Blockchain Technology and Information Security (ICBCTIS 2025).</li>
@@ -180,84 +346,53 @@
             <li>07/2025: Shortlisted in the Jiangsu Province Science and Technology Youth Talent Promotion Program.</li>
             <li>04/2025: Paper accepted for publication in Journal of Information Security and Applications (JISA). </li>
             <li>02/2025: Received the bronze award in the 2024 National Web3.0 Innovation Hackathon.</li>
+        </ul>
+        <span id="toggle-earlier-news">Archived.</span>
+        <div id="earlier-news" class="earlier-news">
+             <ul>
+                 <li>01/2025: Paper accepted at IEEE International Conference on Cloud Computing and Big Data Analytics (ICCCBDA 2025).</li>
+                 <li>01/2025: Invited as a TPC member at ACM International Artificial Intelligence and Blockchain Conference (AIBC 2025).</li>
+                 <li>12/2024: Paper accepted at IEEE International Conference on Artificial Intelligence and Big Data (ICAIBD 2025).</li>
+                 <li>11/2024: Invited as a TPC member at ACM Blockchain and Internet of Things Conference (BIOTC 2025).</li>
+                 <li>10/2024: Invited as a reviewer for the U.S. CUTC best Ph.D. dissertations.</li>
+                 <li>09/2024: Received the Fellowship of UK Higher Education Academy (FHEA).</li>
+                 <li>08/2024: Received the 2022~2023 Suzhou Natural Science Outstanding Academic Paper award. </li>
+                 <li>08/2024: Received the Postgraduate Certificate in Education (PGCE) from University of Liverpool.</li>
+                 <li>07/2024: Paper accepted at IEEE Global Blockchain Conference (GBC 2024).</li>
+                 <li>07/2024: Paper accepted for publication in IEEE Transactions on Computational Social Systems (TCSS).</li>
+                 <li>06/2024: Received the 3rd prize in the 2024 Jiangsu Blockchain Excellent Solution Competition. </li>
+                 <li>04/2024: Invited as a TPC member at ACM Blockchain and Internet of Things Conference (BIOTC 2024).</li>
+                 <li>03/2024: Paper accepted for publication in IEEE Transactions on Intelligent Transportation Systems (T-ITS).</li>
+                 <li>03/2024: Joined the editorial board of IET Blockchain (Special Issue on Blockchain Evolution: Architecture and Applications).</li>
+                 <li>02/2024: Paper accepted at IEEE/ACM International Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE 2024).</li>
+                 <li>01/2024: Invited as a TPC member at ACM International Artificial Intelligence and Blockchain Conference (AIBC 2024).</li>
+                 <li>11/2023: Paper accepted at ACM International Conference on Blockchain Technology and Applications (ICBTA 2023).</li>
+                 <li>10/2023: Invited as a reviewer for the U.S. CUTC best Ph.D. dissertations.</li>
+                 <li>10/2023: Paper accepted at IEEE International Conference on Blockchain (Blockchain 2023).</li>
+                 <li>09/2023: Paper accepted for publication in IEEE Transactions on Services Computing (TSC).</li>
+                 <li>07/2023: Received the Outstanding Ph.D. Dissertation Award 2022 from IEEE TEMS.</li>
+                 <li>05/2023: Received a grant from XJTLU Research Development Fund (RDF).</li>
+                 <li>04/2023: Paper accepted for publication in IEEE Transactions on Intelligent Transportation Systems (T-ITS).</li>
+                 <li>03/2023: Paper accepted for publication in IEEE Transactions on Network and Service Management (TNSM).</li>
+                 <li>01/2023: Received a grant from XJTLU Teaching Development Fund (TDF).</li>
+                 <li>12/2022: Received the Best Dissertation Award 2022 from IEEE Intelligent Transportation Systems Society (ITSS).</li>
+                 <li>12/2022: Paper published in Transportation Research Part C: Emerging Technologies (TR_C).</li>
+                 <li>09/2022: Paper published in IEEE Transactions on Network and Service Management (TNSM).</li>
+                 <li>08/2022: Joined Xi'an Jiaotong-Liverpool University.</li>
+                 <li>05/2022: Received the Graduate Research Award from the University of Delaware.</li>
+                 <li>03/2022: Defended my Ph.D. dissertation at the University of Delaware.</li>
+                 <li>02/2022: Paper accepted at IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid 2022).</li>
+             </ul>
+        </div>
+    </section>
 
-            </div>
-            <!-- 点击显示更多新闻的超链接 -->
-            <li><a href="#" id="toggle-earlier-news">Archived.</a></li>
-            <!-- 这里是早期新闻 -->
-            <div id="earlier-news" class="earlier-news">
-            <li>01/2025: Paper accepted at IEEE International Conference on Cloud Computing and Big Data Analytics (ICCCBDA 2025).</li>
-            <li>01/2025: Invited as a TPC member at ACM International Artificial Intelligence and Blockchain Conference (AIBC 2025).</li>
-            <li>12/2024: Paper accepted at IEEE International Conference on Artificial Intelligence and Big Data (ICAIBD 2025).</li>
-            <li>11/2024: Invited as a TPC member at ACM Blockchain and Internet of Things Conference (BIOTC 2025).</li>
-            <li>10/2024: Invited as a reviewer for the U.S. CUTC best Ph.D. dissertations.</li>
-            <li>09/2024: Received the Fellowship of UK Higher Education Academy (FHEA).</li>
-            <li>08/2024: Received the 2022~2023 Suzhou Natural Science Outstanding Academic Paper award. </li>
-            <li>08/2024: Received the Postgraduate Certificate in Education (PGCE) from University of Liverpool.</li>
-            <li>07/2024: Paper accepted at IEEE Global Blockchain Conference (GBC 2024).</li>
-            <li>07/2024: Paper accepted for publication in IEEE Transactions on Computational Social Systems (TCSS).</li>
-            <li>06/2024: Received the 3rd prize in the 2024 Jiangsu Blockchain Excellent Solution Competition. </li>
-            <li>04/2024: Invited as a TPC member at ACM Blockchain and Internet of Things Conference (BIOTC 2024).</li>
-            <li>03/2024: Paper accepted for publication in IEEE Transactions on Intelligent Transportation Systems (T-ITS).</li>
-            <li>03/2024: Joined the editorial board of IET Blockchain (Special Issue on Blockchain Evolution: Architecture and Applications).</li>
-            <li>02/2024: Paper accepted at IEEE/ACM International Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE 2024).</li>
-            <li>01/2024: Invited as a TPC member at ACM International Artificial Intelligence and Blockchain Conference (AIBC 2024).</li>
-            <li>11/2023: Paper accepted at ACM International Conference on Blockchain Technology and Applications (ICBTA 2023).</li>
-            <li>10/2023: Invited as a reviewer for the U.S. CUTC best Ph.D. dissertations.</li>
-            <li>10/2023: Paper accepted at IEEE International Conference on Blockchain (Blockchain 2023).</li>
-            <li>09/2023: Paper accepted for publication in IEEE Transactions on Services Computing (TSC).</li>
-            <li>07/2023: Received the Outstanding Ph.D. Dissertation Award 2022 from IEEE TEMS.</li>
-            <li>05/2023: Received a grant from XJTLU Research Development Fund (RDF).</li>
-            <li>04/2023: Paper accepted for publication in IEEE Transactions on Intelligent Transportation Systems (T-ITS).</li>
-            <li>03/2023: Paper accepted for publication in IEEE Transactions on Network and Service Management (TNSM).</li>
-            <li>01/2023: Received a grant from XJTLU Teaching Development Fund (TDF).</li>
-            <li>12/2022: Received the Best Dissertation Award 2022 from IEEE Intelligent Transportation Systems Society (ITSS).</li>
-            <li>12/2022: Paper published in Transportation Research Part C: Emerging Technologies (TR_C).</li>
-            <li>09/2022: Paper published in IEEE Transactions on Network and Service Management (TNSM).</li>
-            <li>08/2022: Joined Xi'an Jiaotong-Liverpool University.</li>
-            <li>05/2022: Received the Graduate Research Award from the University of Delaware.</li>
-            <li>03/2022: Defended my Ph.D. dissertation at the University of Delaware.</li>
-            <li>02/2022: Paper accepted at IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGrid 2022).</li>
-            </div>
-         </ul>
-      </font>
-      <br>
-      <script>
-          // 添加点击事件来显示或隐藏早期新闻
-          document.getElementById('toggle-earlier-news').addEventListener('click', function(event) {
-              event.preventDefault(); // 阻止默认的超链接跳转行为
-              var earlierNewsDiv = document.getElementById('earlier-news');
-              if (earlierNewsDiv.style.display === 'none' || earlierNewsDiv.style.display === '') {
-                  earlierNewsDiv.style.display = 'block';
-                  this.textContent = 'Hide Archived.';
-              } else {
-                  earlierNewsDiv.style.display = 'none';
-                  this.textContent = 'Archived.';
-              }
-          });
-      </script>
-      <!--  Teaching -->
-      <!-- <a name = "goto_teaching" ></a>
-      <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Teaching at XJTLU</font></h2>
-      <font face="Arial" style="font-size: 16px">
-         <ul>
-            <li>CAN402: Social Web Programming</li>
-            <li>CAN304: Computer Systems Security</li>
-         </ul>
-      </font>
-      <br> -->
-      <!-- Services -->
-      <a name="goto_services"></a>
-      <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Services</font></h2>
-      <font face="Arial" style="font-size: 16px">
+    <section id="goto_services">
+        <h2>Services</h2>
+        <h3>Editorial Board Member</h3>
+        <ul><li>Guest Lead Editor of IET Blockchain, Special Issue: Blockchain Evolution: Architecture and Applications, vol. 5, 2025</li></ul>
+
+        <h3>Journal Reviewer</h3>
         <ul>
-          <li><b>Editorial Board Member</b></li>
-          <ul>
-            <li>Guest Lead Editor of IET Blockchain, Special Issue: Blockchain Evolution: Architecture and Applications, vol. 5, 2025</li>
-          </ul>
-          <br>
-          <li><b>Journal Reviewer</b></li>
-          <ul>
             <li>IEEE Transactions on Information Forensics & Security (TIFS)</li>
             <li>IEEE Transactions on Dependable and Secure Computing (TDSC)</li>
             <li>IEEE Transactions on Intelligent Transportation Systems (T-ITS)</li>
@@ -265,169 +400,154 @@
             <li>IEEE Transactions on Vehicular Technology (TVT)</li>
             <li>IEEE Transactions on Network and Service Management (TNSM)</li>
             <li>IEEE Internet of Things Journal (IoT-J)</li>
-            <!-- <li>IEEE Access</li>
-            <li>ELSP Blockchain</li>
-            <li>Information Processing & Management</li>
-            <li>Blockchain: Research and Applications</li> -->
-          </ul>
-          <br>
-          <li><b>Technical Program Committee Member</b></li>
-          <ul>
+        </ul>
+
+        <h3>Technical Program Committee Member</h3>
+        <ul>
             <li>IEEE International Conference on Blockchain Technology and Information Security (ICBCTIS, Session Chair), 2025</li>
             <li>ACM International Artificial Intelligence and Blockchain Conference (AIBC), 2024 and 2025</li>
             <li>ACM Blockchain and Internet of Things Conference (BIOTC), 2024 and 2025</li>
             <li>ACM International Conference on Blockchain Technology and Applications (ICBTA), 2023, 2024 and 2025</li>
-          </ul>
-          <br>
-          <li><b>Conference Reviewer</b></li>
-          <ul>
+        </ul>
+
+        <h3>Conference Reviewer</h3>
+        <ul>
             <li>IEEE International Conference on Blockchain (Blockchain), 2021, 2022 and 2023</li>
             <li>IEEE International Performance Computing and Communications Conference (IPCCC), 2023</li>
             <li>International Congress on Blockchain and Applications (BLOCKCHAIN), 2021</li>
-          </ul>
-          <br>
-          <li>Student Awards Committee of U.S. Council of University Transportation Centers (CUTC), 2023 to present</li>
-          <li>Expert of Jiangsu Provincial Department of Industry and Information Technology, 2025 to present</li>
-          <li>Member of IEEE and IET</li>
-          <!-- <li>Blockchain Committee of China Computer Federation (CCF), 2023-</li>
-          <li>School Promotion Leader at XJTLU, 2023-</li>
-          <li>School Year One Leader at XJTLU, 2024-</li> -->
         </ul>
-      </font>
-      <br>
-      <!--  Publications  -->
-      <a name = "goto_publications"></a>
-      <h2> <font face="Arial" style="font-size: 24px" color="#5C307D">Publications</font> </h2>
-      <font face="Arial" style="font-size: 16px">
-         <!--  Dissertation  -->
-         <font color="#E87511">Dissertation</font>
-         <ul>
-            <li><b>Frontiers in Blockchain for Secure Information Sharing in Next Generation Transportation Systems</b> [<a href="https://www.proquest.com/dissertations-theses/frontiers-blockchain-secure-information-sharing/docview/3215951447/se-2" target="_blank">Preview</a>]
-              <br>W. Li, University of Delaware (Supervisor: Prof. Mark Nejad), <i>ProQuest Dissertations and Theses</i>, 2022, ISBN: 9798315796541
-              <br>&#8690; <font color="#D70040">IEEE ITSS Best Dissertation Award 2022</font>
-              <br>&#8690; <font color="#D70040">IEEE TEMS Outstanding Ph.D. Dissertation Award 2022</font>
-              </ul>
-         </ul>
-         <br>
-         <!--  Journal Papers  -->
-         <font color="#E87511">Journal Papers</font> <!--(Corresponding author is marked with <b>*</b>)-->
-         <ol>
-            <li><b>Revocable Signature: Handling Valid but Unauthorized Non-Fungible Token through Auxiliary Embedded Key</b><br>Y. Xia, Z. Ji, J. Zhang, W. Li, K. Man, S. Guan, D. Wojtczak, <i>Cybersecurity</i>, 2026, in press &#8690; <font color="#228B22">JCR Q1, CAS Tier 3, CCF C, IF 3.7</font></li>
-            <br>
-            <li><b>Beyond Liability: Decentralized Forensics for Autonomous Vehicle Events via a Redactable Blockchain Approach</b> [<a href="https://doi.org/10.1109/TNSM.2025.3619069" target="_blank">DOI</a> / <a href="files/Beyond_Liability_Decentralized_Forensics_for_Autonomous_Vehicle_Events_via_a_Redactable_Blockchain_Approach" target="_blank">PDF</a>]<br>H. Guo, W. Li*, C. Meese, Y. Wang, M. Nejad, <i>IEEE Transactions on Network and Service Management</i>, vol. 22, no. 6, pp. 5390-5403, Dec. 2025 &#8690; <font color="#228B22">JCR Q1, CAS Tier 2, CCF C, IF 5.4</font></li>
-            <br>
-            <li><b>C-PFL: A Committee-based Personalized Federated Learning Framework</b> [<a href="https://doi.org/10.1016/j.jnca.2025.104327" target="_blank">DOI</a> / <a href="files/1-s2.0-S1084804525002243-main.pdf" target="_blank">PDF</a>]<br>L. Pan, H. Guo*, W. Li*, <i>Journal of Network and Computer Applications</i>, vol. 243, 104327, Nov. 2025 &#8690; <font color="#228B22">JCR Q1, CAS Tier 2, CCF C, IF 8.0</font></li>
-            <br>
-            <li><b>Updatable Signature with Public Tokens</b> [<a href="https://doi.org/10.1016/j.jisa.2025.104058" target="_blank">DOI</a> / <a href="files/1-s2.0-S221421262500095X-main.pdf" target="_blank">PDF</a>]<br>H. Yin, J. Zhang*, W. Li*, Y. Dong, EG. Lim, D. Wojtczak, <i>Journal of Information Security and Applications</i>, vol. 91, 104058, June 2025 &#8690; JCR Q2, CAS Tier 3, IF 3.8</li>
-            <br>
-            <li><b>An Advanced Pricing Mechanism for Non-Fungible Tokens (NFTs) Based on Rarity and Market Dynamics</b> [<a href="https://doi.org/10.1109/TCSS.2024.3430846" target="_blank">DOI</a> / <a href="files/An_Advanced_Pricing_Mechanism_for_Nonfungible_Tokens_NFTs_Based_on_Rarity_and_Market_Dynamics.pdf" target="_blank">PDF</a>]<br>W. Xiong, Y. Wang, W. Li*, Y. Zhang, J. Zhang* and H. Guo*, <i>IEEE Transactions on Computational Social Systems</i>, vol. 11, no. 6, pp. 7671-7684, Dec. 2024 &#8690; <font color="#228B22">JCR Q1, CAS Tier 2, CCF C, IF 4.5</font></li>
-            <br>
-            <li><b>Adaptive Traffic Prediction at the ITS Edge with Online Models and Blockchain-based Federated Learning</b> [<a href="https://doi.org/10.1109/TITS.2024.3391053" target="_blank">DOI</a> / <a href="files/Adaptive_Traffic_Prediction_at_the_ITS_Edge_With_Online_Models_and_Blockchain-Based_Federated_Learning.pdf" target="_blank">PDF</a>]<br>C. Meese, H. Chen, W. Li*, D. Lee, H. Guo, C. Shen and M. Nejad, <i>IEEE Transactions on Intelligent Transportation Systems</i>, vol. 25, no. 9, pp. 10725-10740, Sept. 2024 &#8690; <font color="#228B22">JCR Q1, <font color="#D70040">CAS Tier 1,</font> CCF B, IF 7.9</font></li>
-            <br>
-            <li><b>B<sup>2</sup>SFL: A Bi-level Blockchained Architecture for Secure Federated Learning-based Traffic Prediction</b> [<a href="https://doi.org/10.1109/TSC.2023.3318990" target="_blank">DOI</a> / <a href="files/B2SFL_A_Bi-Level_Blockchained_Architecture_fornbspSecure_Federated_Learning-Based_TrafficnbspPrediction.pdf" target="_blank">PDF</a>]<br>H. Guo, C. Meese, W. Li*, C. Shen and M. Nejad, <i>IEEE Transactions on Services Computing</i>, vol. 16, no. 6, pp. 4360-4374, Nov.-Dec. 2023 &#8690; <font color="#228B22">JCR Q1, CAS Tier 2, <font color="#D70040">CCF A,</font> IF 8.1</font></li>
-            <br>
-            <li><b>Aggregated Zero-knowledge Proof and Blockchain-Empowered Authentication for Autonomous Truck Platooning</b> [<a href="https://doi.org/10.1109/TITS.2023.3271436" target="_blank">DOI</a> / <a href="files/Aggregated_Zero-Knowledge_Proof_and_Blockchain-Empowered_Authentication_for_Autonomous_Truck_Platooning.pdf" target="_blank">PDF</a>]<br>W. Li, C. Meese, H. Hao and M. Nejad, <i>IEEE Transactions on Intelligent Transportation Systems</i>, vol. 24, no. 9, pp. 9309-9323, Sept. 2023 &#8690; <font color="#228B22">JCR Q1, <font color="#D70040">CAS Tier 1,</font> CCF B, IF 8.5, Suzhou Natural Science Excellent Academic Paper</font></li>
-            <br>
-            <li><b>A Hybrid Blockchain-Edge Architecture for Electronic Health Records Management with Attribute-based Cryptographic Mechanisms</b> [<a href="https://doi.org/10.1109/TNSM.2022.3186006" target="_blank">DOI</a> / <a href="files/A_Hybrid_Blockchain-Edge_Architecture_for_Electronic_Health_Record_Management_with_Attribute-based_Cryptographic_Mechanisms.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li*, M. Nejad and C. Shen, <i>IEEE Transactions on Network and Service Management</i>, vol. 20, no. 2, pp. 1759-1774, June 2023 &#8690; <font color="#228B22">JCR Q1, CAS Tier 2, CCF C, IF 5.3</font></li>
-            <br>
-            <li><b>Traffic Prediction using Artificial Intelligence: Review of Recent Advances and Emerging Opportunities</b> [<a href="https://doi.org/10.1016/j.trc.2022.103921" target="_blank">DOI</a> / <a href="files/1-s2.0-S0968090X22003345-main.pdf" target="_blank">PDF</a>]<br> M. Shaygen, C. Meese, W. Li, X. Zhao and M. Nejad, <i>Transportation Research Part C-Emerging Technologies</i>, vol. 145, 103921, Dec. 2022 &#8690; <font color="#228B22">JCR Q1, <font color="#D70040">CAS Tier 1,</font> IF 8.3</font></li>
-            <br>
-            <li><b>A Hierarchical and Location-aware Consensus Protocol for IoT-Blockchain Applications</b> [<a href="https://doi.org/10.1109/TNSM.2022.3176607" target="_blank">DOI</a> / <a href="files/TNSM3176607.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li* and M. Nejad, <i>IEEE Transactions on Network and Service Management</i>, vol. 19, no. 3, pp. 2972-2986, Sept. 2022 &#8690; <font color="#228B22">JCR Q1, CAS Tier 2, CCF C, IF 5.3</font></li>
-            <br>
-            <li><b>Proof-of-Event Recording System for Autonomous Vehicles: A Blockchain-based Solution</b> [<a href="https://doi.org/10.1109/ACCESS.2020.3029512" target="_blank">DOI</a> / <a href="files/ACCESS3029512.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li, M. Nejad and C. Shen, <i>IEEE Access</i>, vol. 8, pp. 182776-182786, Oct. 2020 &#8690; JCR Q2, CAS Tier 3, IF 3.745</li>
-            <br>
-            <li><b>Privacy-Preserving Traffic Management: A Blockchain and Zero-Knowledge Proof Inspired Approach</b> [<a href="https://doi.org/10.1109/ACCESS.2020.3028189" target="_blank">DOI</a> / <a href="files/ACCESS3028189.pdf" target="_blank">PDF</a>]<br>W. Li, H. Guo, M. Nejad and C. Shen, <i>IEEE Access</i>, vol. 8, pp. 181733-181743, Oct. 2020 &#8690; JCR Q2, CAS Tier 3, IF 3.745</li>
-         </ol>
-         <br>
-         <!--  Conference Papers  -->
-         <font color="#E87511">Conference Papers</font>
-         <ol>
-           <li><b>Towards Trusted Textual Data Valuation: Information Entropy as the Key</b><br>Y. Wang, W. Xiong, W. Li*, H. Guo* and J. Zhang*, <i>IEEE International Conference on Blockchain Technology and Information Security (ICBCTIS 2025)</i>, Haikou, China, December 5-7, 2025, in press</li>
-           <br>
-           <li><b>Bidirectional Authentication for Safe Ridesharing Empowered by Permissioned Blockchain</b> [<a href="10.1109/GBC60041.2025.11134467" target="_blank">DOI</a> / <a href="files/Bidirectional_Authentication_for_Safe_Ridesharing_Empowered_by_Permissioned_Blockchain.pdf" target="_blank">PDF</a>]<br>W. Li, C. Meese, M. Nejad, H. Guo and J. Zhang, <i>IEEE Global Blockchain Conference (GBC 2025)</i>, Shanghai, China, June 20-22, 2025</li>
-           <br>
-           <li><b>Integrating Blockchain and Federated Learning for Cryptocurrency Market Prediction: Major Exchanges as Nodes</b> [<a href="https://doi.org/10.1109/ICAIBD64986.2025.11081867" target="_blank">DOI</a> / <a href="files/Integrating_Blockchain_and_Federated_Learning_for_Cryptocurrency_Market_Prediction_Major_Exchanges_as_Nodes.pdf" target="_blank">PDF</a>]<br>Z. Wang, Z. Guo, W. Li*, J. Zhang* and H. Guo*, <i>IEEE International Conference on Artificial Intelligence and Big Data (ICAIBD 2025)</i>, Chengdu, China, May 23-26, 2025</li>
-           <br>
-           <li><b>FSCO: A Secure and Adaptive Framework for Supply Chain Optimization</b> [<a href="https://doi.org/10.1109/ICCCBDA64898.2025.11030480" target="_blank">DOI</a> / <a href="files/FSCO_A_Secure_and_Adaptive_Framework_for_Supply_Chain_Optimization.pdf" target="_blank">PDF</a>]<br>T. Wang, X. Fan, W. Li*, H. Guo*, J. Zhang*, <i>IEEE International Conference on Cloud Computing and Big Data Analytics (ICCCBDA 2025)</i>, Chengdu, China, April 25-27, 2025 &#8690; <font color="#228B22">Excellent Presentation Award</font></li>
-           <br>
-           <li><b>Decentralized Electronic Health Records Management via Redactable Blockchain and Revocable IPFS</b> [<a href="https://doi.org/10.1109/CHASE60773.2024.00028" target="_blank">DOI</a> / <a href="files/Decentralized_Electronic_Health_Records_Management_via_Redactable_Blockchain_and_Revocable_IPFS.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li, C. Meese and M. Nejad, <i>IEEE/ACM International Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE 2024)</i>, Wilmington, DE, USA, June 19-21, 2024</li>
-           <br>
-           <li><b>ZK-BFT: A Zero-knowledge and Byzantine Fault Tolerant Consensus for Permissioned Blockchain Networks</b> [<a href="https://doi.org/10.1145/3651655.3651663" target="_blank">DOI</a> / <a href="files/ZK-BFT.pdf" target="_blank">PDF</a>]<br>W. Li, C. Meese, M. Nejad and H. Guo, <i>ACM International Conference on Blockchain Technology and Applications (ICBTA 2023)</i>, Xi'an, China, December 15-17, 2023</li>
-           <br>
-           <li><b>Pricing Mechanism of Non-Fungible Token (NFT) Driven by Rarity Design</b> [<a href="https://doi.org/10.1109/Blockchain60715.2023.00021" target="_blank">DOI</a> / <a href="files/Pricing_Mechanism_of_Non-fungible_Token_NFT_Driven_by_Rarity_Design.pdf" target="_blank">PDF</a>]<br>W. Xiong, Y. Wang, W. Li*, J. Zhang and H. Guo, <i>IEEE International Conference on Blockchain (Blockchain 2023)</i>, Hainan, China, December 17-21, 2023</li>
-           <br>
-            <li><b>BFRT: Blockchained Federated Learning for Real-time Traffic Flow Prediction</b> [<a href="https://doi.org/10.1109/CCGrid54584.2022.00041" target="_blank">DOI</a> / <a href="files/BFRT_Blockchained_Federated_Learning_for_Real-time_Traffic_Flow_Prediction.pdf" target="_blank">PDF</a>]<br>C. Meese, H. Chen, S. Asif, W. Li, C. Shen and M. Nejad, <i>IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGrid 2022)</i>, Taormina, Italy, May 16-19, 2022 &#8690; <font color="#228B22">CCF C</font></li>
-            <br>
-            <li><b>A Location-based and Hierarchical Framework for Fast Consensus in Blockchain Networks</b> [<a href="https://doi.org/10.1109/HotICN53262.2021.9680858" target="_blank">DOI</a> / <a href="files/A_Location-based_and_Hierarchical_Framework_for_Fast_Consensus_in_Blockchain_Networks.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li and M. Nejad, <i>IEEE International Conference on Hot Information-Centric Networking (HotICN 2021)</i>, Nanjing, China, November 25-27, 2021</li>
-            <br>
-            <li><b>P-CFT: A Privacy-preserving and Crash Fault Tolerant Consensus Algorithm for Permissioned Blockchains</b> [<a href="https://doi.org/10.1109/HotICN53262.2021.9680829" target="_blank">DOI</a> / <a href="files/P-CFT_A_Privacy-preserving_and_Crash_Fault_Tolerant_Consensus_Algorithm_for_Permissioned_Blockchains.pdf" target="_blank">PDF</a>]<br>W. Li, C. Meese, M. Nejad and H. Guo, <i>IEEE International Conference on Hot Information-Centric Networking (HotICN 2021)</i>, Nanjing, China, November 25-27, 2021</li>
-            <br>
-            <li><b>Location-aware Verification for Autonomous Truck Platooning Based on Blockchain and Zero-knowledge Proof</b> [<a href="https://doi.org/10.1109/ICBC51069.2021.9461116" target="_blank">DOI</a> / <a href="files/Location-aware_Verification_for_Autonomous_Truck_Platooning_Based_on_Blockchain_and_Zero-knowledge_Proof.pdf" target="_blank">PDF</a>]<br>W. Li, C. Meese, Z. Zhong, H. Guo and M. Nejad, <i>IEEE International Conference on Blockchain and Cryptocurrency (ICBC 2021)</i>, Sydney, Australia, May 3-6, 2021</li>
-            <br>
-            <li><b>Blockchain-enabled Identity Verification for Safe Ridesharing Leveraging Zero-Knowledge Proof</b> [<a href="https://doi.org/10.1109/HotICN50779.2020.9350858" target="_blank">DOI</a> / <a href="files/Blockchain-Enabled_Identity_Verification_for_Safe_Ridesharing_Leveraging_Zero-Knowledge_Proof.pdf" target="_blank">PDF</a>]<br>W. Li, C. Meese, H. Guo and M. Nejad, <i>IEEE International Conference on Hot Information-Centric Networking (HotICN 2020)</i>, Hefei, China, December 12-14, 2020</li>
-            <br>
-            <li><b>Attribute-based Multi-Signature and Encryption for EHR Management: A Blockchain-based Solution</b> [<a href="https://doi.org/10.1109/ICBC48266.2020.9169395" target="_blank">DOI</a> / <a href="files/Attribute-based_Multi-Signature_and_Encryption_for_EHR_Management_A_Blockchain-based_Solution.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li, E. Meamari, M. Nejad and C. Shen, <i>IEEE International Conference on Blockchain and Cryptocurrency (ICBC 2020)</i>, Toronto, Canada, May 2-6, 2020</li>
-            <br>
-            <li><b>Access Control for Electronic Health Records with Hybrid Blockchain-Edge Architecture</b> [<a href="https://doi.org/10.1109/Blockchain.2019.00015" target="_blank">DOI</a> / <a href="files/Access_Control_for_Electronic_Health_Records_with_Hybrid_Blockchain-Edge_Architecture.pdf" target="_blank">PDF</a>]<br>H. Guo, W. Li, M. Nejad and C. Shen, <i>IEEE International Conference on Blockchain (Blockchain 2019)</i>, Atlanta, USA, July 14-17, 2019</li>
-            <br>
-            <li><b>A Blockchain-based Architecture for Traffic Signal Control Systems</b> [<a href="https://doi.org/10.1109/ICIOT.2019.00018" target="_blank">DOI</a> / <a href="files/A_Blockchain-Based_Architecture_for_Traffic_Signal_Control_Systems.pdf" target="_blank">PDF</a>]<br>W. Li, M. Nejad and R. Zhang, <i>IEEE International Congress on Internet of Things (ICIOT 2019)</i>, Milano, Italy, July 8-13, 2019</li>
-         </ol>
-      </font>
-      <br>
-      <!-- Students -->
-      <a name="goto_students"></a>
-      <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Student Advising</font></h2>
-      <font face="Arial" style="font-size: 16px">
-         <font color="#E87511">Current Students</font>
-         <ul>
-           <li><b>Graduate Students</b>
-             <ul>
-             <li>Yetong Wang</li>
-             <li>Zhenhao Song</li>
-             </ul><br>
-           <li><b>Undergradute Students</b>
-             <ul>
-               <li>Xiang Li</li>
-               <li>Wufan Sun</li>
-               <li>Zhengxu Jing</li>
-               <li>Zezheng Liu</li>
-             </ul>
-         </ul><br>
-         <font color="#E87511">Former Students</font>
-         <ul>
-           <li><b>Graduate Students (11)</b>
-             <ul>
-               <li>Jiaxuan Li (MS, 2025)</li>
-               <li>Jiachen Wang (MS, 2025)</li>
-               <li>Zijie Wang (MS, 2025)</li>
-               <li>Tianyou Wang (MS, 2025)</li>
-               <li>Xuan Wang (MS, 2025)</li>
-               <li>Diyang Zhu (MS, 2025)</li>
-               <li>Yujun Deng (MS, 2024)</li>
-               <li>Sheng Fang (MS, 2024)</li>
-               <li>Wenze Xiong (MS, 2024, University of Auckland, NZ)</li>
-               <li>Yiran Tian (MS, 2024)</li>
-               <li>Yutong Zhang (MS, 2024)</li>
-             </ul><br>
-           <li><b>Undergradute Students (8)</b>
-             <ul>
-               <li>Fazhi Chen (BS, 2025)</li>
-               <li>Jiayun Yu (BS, 2024, Georgetown University, USA)</li>
-               <li>Yuntao Nie (BS, 2023)</li>
-               <li>Yetong Wang (BS, 2023, Australian National University, AU)</li>
-               <li>Bo Wang (BS, 2023)</li>
-               <li>Wenrui Liu (BS, 2023, University College London, UK)</li>
-               <li>Haoyu Wang (BS, 2023)</li>
-               <li>Bocheng Zhang (BS, 2023, University of Edinburgh, UK)</li>
-             </ul>
-         </ul>
-      </font>
-      <br>
-      <!--  Awards  -->
-      <a name = "goto_awards" ></a>
-      <h2><font face="Arial" style="font-size: 24px" color="#5C307D">Awards and Honors</font></h2>
-      <font face="Arial" style="font-size: 16px">
-         <ul>
+
+        <h3>Others</h3>
+        <ul>
+            <li>Student Awards Committee of U.S. Council of University Transportation Centers (CUTC), 2023 to present</li>
+            <li>Expert of Jiangsu Provincial Department of Industry and Information Technology, 2025 to present</li>
+            <li>Member of IEEE and IET</li>
+        </ul>
+    </section>
+
+    <section id="goto_publications">
+        <h2>Publications</h2>
+
+        <h3>Dissertation</h3>
+        <ul>
+            <li><span class="pub-title">Frontiers in Blockchain for Secure Information Sharing in Next Generation Transportation Systems</span> [<a href="https://www.proquest.com/dissertations-theses/frontiers-blockchain-secure-information-sharing/docview/3215951447/se-2" target="_blank">Preview</a>]
+            <br>W. Li, University of Delaware (Supervisor: Prof. Mark Nejad), <i>ProQuest Dissertations and Theses</i>, 2022, ISBN: 9798315796541
+            <br>&#8690; <span class="award-tag">IEEE ITSS Best Dissertation Award 2022</span>
+            <br>&#8690; <span class="award-tag">IEEE TEMS Outstanding Ph.D. Dissertation Award 2022</span>
+            </li>
+        </ul>
+
+        <h3>Journal Papers</h3>
+        <ol>
+            <li><span class="pub-title">Revocable Signature: Handling Valid but Unauthorized Non-Fungible Token through Auxiliary Embedded Key</span><br>
+            Y. Xia, Z. Ji, J. Zhang, W. Li, K. Man, S. Guan, D. Wojtczak, <i>Cybersecurity</i>, 2026, in press &#8690; <span class="stat-tag">JCR Q1, CAS Tier 3, CCF C, IF 3.7</span></li>
+
+            <li><span class="pub-title">Beyond Liability: Decentralized Forensics for Autonomous Vehicle Events via a Redactable Blockchain Approach</span> [<a href="https://doi.org/10.1109/TNSM.2025.3619069" target="_blank">DOI</a> / <a href="files/Beyond_Liability_Decentralized_Forensics_for_Autonomous_Vehicle_Events_via_a_Redactable_Blockchain_Approach.pdf" target="_blank">PDF</a>]<br>
+            H. Guo, W. Li*, C. Meese, Y. Wang, M. Nejad, <i>IEEE Transactions on Network and Service Management</i>, vol. 22, no. 6, pp. 5390-5403, Dec. 2025 &#8690; <span class="stat-tag">JCR Q1, CAS Tier 2, CCF C, IF 5.4</span></li>
+
+            <li><span class="pub-title">C-PFL: A Committee-based Personalized Federated Learning Framework</span> [<a href="https://doi.org/10.1016/j.jnca.2025.104327" target="_blank">DOI</a> / <a href="files/1-s2.0-S1084804525002243-main.pdf" target="_blank">PDF</a>]<br>
+            L. Pan, H. Guo*, W. Li*, <i>Journal of Network and Computer Applications</i>, vol. 243, 104327, Nov. 2025 &#8690; <span class="stat-tag">JCR Q1, CAS Tier 2, CCF C, IF 8.0</span></li>
+
+            <li><span class="pub-title">Updatable Signature with Public Tokens</span> [<a href="https://doi.org/10.1016/j.jisa.2025.104058" target="_blank">DOI</a> / <a href="files/1-s2.0-S221421262500095X-main.pdf" target="_blank">PDF</a>]<br>
+            H. Yin, J. Zhang*, W. Li*, Y. Dong, EG. Lim, D. Wojtczak, <i>Journal of Information Security and Applications</i>, vol. 91, 104058, June 2025 &#8690; JCR Q2, CAS Tier 3, IF 3.8</li>
+
+            <li><span class="pub-title">An Advanced Pricing Mechanism for Non-Fungible Tokens (NFTs) Based on Rarity and Market Dynamics</span> [<a href="https://doi.org/10.1109/TCSS.2024.3430846" target="_blank">DOI</a> / <a href="files/An_Advanced_Pricing_Mechanism_for_Nonfungible_Tokens_NFTs_Based_on_Rarity_and_Market_Dynamics.pdf" target="_blank">PDF</a>]<br>
+            W. Xiong, Y. Wang, W. Li*, Y. Zhang, J. Zhang* and H. Guo*, <i>IEEE Transactions on Computational Social Systems</i>, vol. 11, no. 6, pp. 7671-7684, Dec. 2024 &#8690; <span class="stat-tag">JCR Q1, CAS Tier 2, CCF C, IF 4.5</span></li>
+
+            <li><span class="pub-title">Adaptive Traffic Prediction at the ITS Edge with Online Models and Blockchain-based Federated Learning</span> [<a href="https://doi.org/10.1109/TITS.2024.3391053" target="_blank">DOI</a> / <a href="files/Adaptive_Traffic_Prediction_at_the_ITS_Edge_With_Online_Models_and_Blockchain-Based_Federated_Learning.pdf" target="_blank">PDF</a>]<br>
+            C. Meese, H. Chen, W. Li*, D. Lee, H. Guo, C. Shen and M. Nejad, <i>IEEE Transactions on Intelligent Transportation Systems</i>, vol. 25, no. 9, pp. 10725-10740, Sept. 2024 &#8690; <span class="stat-tag">JCR Q1, <span class="award-tag">CAS Tier 1,</span> CCF B, IF 7.9</span></li>
+
+            <li><span class="pub-title">B<sup>2</sup>SFL: A Bi-level Blockchained Architecture for Secure Federated Learning-based Traffic Prediction</span> [<a href="https://doi.org/10.1109/TSC.2023.3318990" target="_blank">DOI</a> / <a href="files/B2SFL_A_Bi-Level_Blockchained_Architecture_fornbspSecure_Federated_Learning-Based_TrafficnbspPrediction.pdf" target="_blank">PDF</a>]<br>
+            H. Guo, C. Meese, W. Li*, C. Shen and M. Nejad, <i>IEEE Transactions on Services Computing</i>, vol. 16, no. 6, pp. 4360-4374, Nov.-Dec. 2023 &#8690; <span class="stat-tag">JCR Q1, CAS Tier 2, <span class="award-tag">CCF A,</span> IF 8.1</span></li>
+
+            <li><span class="pub-title">Aggregated Zero-knowledge Proof and Blockchain-Empowered Authentication for Autonomous Truck Platooning</span> [<a href="https://doi.org/10.1109/TITS.2023.3271436" target="_blank">DOI</a> / <a href="files/Aggregated_Zero-Knowledge_Proof_and_Blockchain-Empowered_Authentication_for_Autonomous_Truck_Platooning.pdf" target="_blank">PDF</a>]<br>
+            W. Li, C. Meese, H. Hao and M. Nejad, <i>IEEE Transactions on Intelligent Transportation Systems</i>, vol. 24, no. 9, pp. 9309-9323, Sept. 2023 &#8690; <span class="stat-tag">JCR Q1, <span class="award-tag">CAS Tier 1,</span> CCF B, IF 8.5, Suzhou Natural Science Excellent Academic Paper</span></li>
+
+            <li><span class="pub-title">A Hybrid Blockchain-Edge Architecture for Electronic Health Records Management with Attribute-based Cryptographic Mechanisms</span> [<a href="https://doi.org/10.1109/TNSM.2022.3186006" target="_blank">DOI</a> / <a href="files/A_Hybrid_Blockchain-Edge_Architecture_for_Electronic_Health_Record_Management_with_Attribute-based_Cryptographic_Mechanisms.pdf" target="_blank">PDF</a>]<br>
+            H. Guo, W. Li*, M. Nejad and C. Shen, <i>IEEE Transactions on Network and Service Management</i>, vol. 20, no. 2, pp. 1759-1774, June 2023 &#8690; <span class="stat-tag">JCR Q1, CAS Tier 2, CCF C, IF 5.3</span></li>
+
+            <li><span class="pub-title">Traffic Prediction using Artificial Intelligence: Review of Recent Advances and Emerging Opportunities</span> [<a href="https://doi.org/10.1016/j.trc.2022.103921" target="_blank">DOI</a> / <a href="files/1-s2.0-S0968090X22003345-main.pdf" target="_blank">PDF</a>]<br>
+            M. Shaygen, C. Meese, W. Li, X. Zhao and M. Nejad, <i>Transportation Research Part C-Emerging Technologies</i>, vol. 145, 103921, Dec. 2022 &#8690; <span class="stat-tag">JCR Q1, <span class="award-tag">CAS Tier 1,</span> IF 8.3</span></li>
+
+            <li><span class="pub-title">A Hierarchical and Location-aware Consensus Protocol for IoT-Blockchain Applications</span> [<a href="https://doi.org/10.1109/TNSM.2022.3176607" target="_blank">DOI</a> / <a href="files/TNSM3176607.pdf" target="_blank">PDF</a>]<br>
+            H. Guo, W. Li* and M. Nejad, <i>IEEE Transactions on Network and Service Management</i>, vol. 19, no. 3, pp. 2972-2986, Sept. 2022 &#8690; <span class="stat-tag">JCR Q1, CAS Tier 2, CCF C, IF 5.3</span></li>
+
+            <li><span class="pub-title">Proof-of-Event Recording System for Autonomous Vehicles: A Blockchain-based Solution</span> [<a href="https://doi.org/10.1109/ACCESS.2020.3029512" target="_blank">DOI</a> / <a href="files/ACCESS3029512.pdf" target="_blank">PDF</a>]<br>
+            H. Guo, W. Li, M. Nejad and C. Shen, <i>IEEE Access</i>, vol. 8, pp. 182776-182786, Oct. 2020 &#8690; JCR Q2, CAS Tier 3, IF 3.745</li>
+
+            <li><span class="pub-title">Privacy-Preserving Traffic Management: A Blockchain and Zero-Knowledge Proof Inspired Approach</span> [<a href="https://doi.org/10.1109/ACCESS.2020.3028189" target="_blank">DOI</a> / <a href="files/ACCESS3028189.pdf" target="_blank">PDF</a>]<br>
+            W. Li, H. Guo, M. Nejad and C. Shen, <i>IEEE Access</i>, vol. 8, pp. 181733-181743, Oct. 2020 &#8690; JCR Q2, CAS Tier 3, IF 3.745</li>
+        </ol>
+
+        <h3>Conference Papers</h3>
+        <ol>
+            <li><span class="pub-title">Towards Trusted Textual Data Valuation: Information Entropy as the Key</span><br>
+            Y. Wang, W. Xiong, W. Li*, H. Guo* and J. Zhang*, <i>IEEE International Conference on Blockchain Technology and Information Security (ICBCTIS 2025)</i>, Haikou, China, December 5-7, 2025, in press</li>
+
+            <li><span class="pub-title">Bidirectional Authentication for Safe Ridesharing Empowered by Permissioned Blockchain</span> [<a href="10.1109/GBC60041.2025.11134467" target="_blank">DOI</a> / <a href="files/Bidirectional_Authentication_for_Safe_Ridesharing_Empowered_by_Permissioned_Blockchain.pdf" target="_blank">PDF</a>]<br>
+            W. Li, C. Meese, M. Nejad, H. Guo and J. Zhang, <i>IEEE Global Blockchain Conference (GBC 2025)</i>, Shanghai, China, June 20-22, 2025</li>
+
+            <li><span class="pub-title">Integrating Blockchain and Federated Learning for Cryptocurrency Market Prediction: Major Exchanges as Nodes</span> [<a href="https://doi.org/10.1109/ICAIBD64986.2025.11081867" target="_blank">DOI</a> / <a href="files/Integrating_Blockchain_and_Federated_Learning_for_Cryptocurrency_Market_Prediction_Major_Exchanges_as_Nodes.pdf" target="_blank">PDF</a>]<br>
+            Z. Wang, Z. Guo, W. Li*, J. Zhang* and H. Guo*, <i>IEEE International Conference on Artificial Intelligence and Big Data (ICAIBD 2025)</i>, Chengdu, China, May 23-26, 2025</li>
+
+            <li><span class="pub-title">FSCO: A Secure and Adaptive Framework for Supply Chain Optimization</span> [<a href="https://doi.org/10.1109/ICCCBDA64898.2025.11030480" target="_blank">DOI</a> / <a href="files/FSCO_A_Secure_and_Adaptive_Framework_for_Supply_Chain_Optimization.pdf" target="_blank">PDF</a>]<br>
+            T. Wang, X. Fan, W. Li*, H. Guo*, J. Zhang*, <i>IEEE International Conference on Cloud Computing and Big Data Analytics (ICCCBDA 2025)</i>, Chengdu, China, April 25-27, 2025 &#8690; <span class="stat-tag">Excellent Presentation Award</span></li>
+
+            <li><span class="pub-title">Decentralized Electronic Health Records Management via Redactable Blockchain and Revocable IPFS</span> [<a href="https://doi.org/10.1109/CHASE60773.2024.00028" target="_blank">DOI</a> / <a href="files/Decentralized_Electronic_Health_Records_Management_via_Redactable_Blockchain_and_Revocable_IPFS.pdf" target="_blank">PDF</a>]<br>
+            H. Guo, W. Li, C. Meese and M. Nejad, <i>IEEE/ACM International Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE 2024)</i>, Wilmington, DE, USA, June 19-21, 2024</li>
+
+            <li><span class="pub-title">ZK-BFT: A Zero-knowledge and Byzantine Fault Tolerant Consensus for Permissioned Blockchain Networks</span> [<a href="https://doi.org/10.1145/3651655.3651663" target="_blank">DOI</a> / <a href="files/ZK-BFT.pdf" target="_blank">PDF</a>]<br>
+            W. Li, C. Meese, M. Nejad and H. Guo, <i>ACM International Conference on Blockchain Technology and Applications (ICBTA 2023)</i>, Xi'an, China, December 15-17, 2023</li>
+
+            <li><span class="pub-title">Pricing Mechanism of Non-Fungible Token (NFT) Driven by Rarity Design</span> [<a href="https://doi.org/10.1109/Blockchain60715.2023.00021" target="_blank">DOI</a> / <a href="files/Pricing_Mechanism_of_Non-fungible_Token_NFT_Driven_by_Rarity_Design.pdf" target="_blank">PDF</a>]<br>
+            W. Xiong, Y. Wang, W. Li*, J. Zhang and H. Guo, <i>IEEE International Conference on Blockchain (Blockchain 2023)</i>, Hainan, China, December 17-21, 2023</li>
+
+            <li><span class="pub-title">BFRT: Blockchained Federated Learning for Real-time Traffic Flow Prediction</span> [<a href="https://doi.org/10.1109/CCGrid54584.2022.00041" target="_blank">DOI</a> / <a href="files/BFRT_Blockchained_Federated_Learning_for_Real-time_Traffic_Flow_Prediction.pdf" target="_blank">PDF</a>]<br>
+            C. Meese, H. Chen, S. Asif, W. Li, C. Shen and M. Nejad, <i>IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGrid 2022)</i>, Taormina, Italy, May 16-19, 2022 &#8690; <span class="stat-tag">CCF C</span></li>
+
+            <li><span class="pub-title">A Location-based and Hierarchical Framework for Fast Consensus in Blockchain Networks</span> [<a href="https://doi.org/10.1109/HotICN53262.2021.9680858" target="_blank">DOI</a> / <a href="files/A_Location-based_and_Hierarchical_Framework_for_Fast_Consensus_in_Blockchain_Networks.pdf" target="_blank">PDF</a>]<br>
+            H. Guo, W. Li and M. Nejad, <i>IEEE International Conference on Hot Information-Centric Networking (HotICN 2021)</i>, Nanjing, China, November 25-27, 2021</li>
+
+            <li><span class="pub-title">P-CFT: A Privacy-preserving and Crash Fault Tolerant Consensus Algorithm for Permissioned Blockchains</span> [<a href="https://doi.org/10.1109/HotICN53262.2021.9680829" target="_blank">DOI</a> / <a href="files/P-CFT_A_Privacy-preserving_and_Crash_Fault_Tolerant_Consensus_Algorithm_for_Permissioned_Blockchains.pdf" target="_blank">PDF</a>]<br>
+            W. Li, C. Meese, M. Nejad and H. Guo, <i>IEEE International Conference on Hot Information-Centric Networking (HotICN 2021)</i>, Nanjing, China, November 25-27, 2021</li>
+
+            <li><span class="pub-title">Location-aware Verification for Autonomous Truck Platooning Based on Blockchain and Zero-knowledge Proof</span> [<a href="https://doi.org/10.1109/ICBC51069.2021.9461116" target="_blank">DOI</a> / <a href="files/Location-aware_Verification_for_Autonomous_Truck_Platooning_Based_on_Blockchain_and_Zero-knowledge_Proof.pdf" target="_blank">PDF</a>]<br>
+            W. Li, C. Meese, Z. Zhong, H. Guo and M. Nejad, <i>IEEE International Conference on Blockchain and Cryptocurrency (ICBC 2021)</i>, Sydney, Australia, May 3-6, 2021</li>
+
+            <li><span class="pub-title">Blockchain-enabled Identity Verification for Safe Ridesharing Leveraging Zero-Knowledge Proof</span> [<a href="https://doi.org/10.1109/HotICN50779.2020.9350858" target="_blank">DOI</a> / <a href="files/Blockchain-Enabled_Identity_Verification_for_Safe_Ridesharing_Leveraging_Zero-Knowledge_Proof.pdf" target="_blank">PDF</a>]<br>
+            W. Li, C. Meese, H. Guo and M. Nejad, <i>IEEE International Conference on Hot Information-Centric Networking (HotICN 2020)</i>, Hefei, China, December 12-14, 2020</li>
+
+            <li><span class="pub-title">Attribute-based Multi-Signature and Encryption for EHR Management: A Blockchain-based Solution</span> [<a href="https://doi.org/10.1109/ICBC48266.2020.9169395" target="_blank">DOI</a> / <a href="files/Attribute-based_Multi-Signature_and_Encryption_for_EHR_Management_A_Blockchain-based_Solution.pdf" target="_blank">PDF</a>]<br>
+            H. Guo, W. Li, E. Meamari, M. Nejad and C. Shen, <i>IEEE International Conference on Blockchain and Cryptocurrency (ICBC 2020)</i>, Toronto, Canada, May 2-6, 2020</li>
+
+            <li><span class="pub-title">Access Control for Electronic Health Records with Hybrid Blockchain-Edge Architecture</span> [<a href="https://doi.org/10.1109/Blockchain.2019.00015" target="_blank">DOI</a> / <a href="files/Access_Control_for_Electronic_Health_Records_with_Hybrid_Blockchain-Edge_Architecture.pdf" target="_blank">PDF</a>]<br>
+            H. Guo, W. Li, M. Nejad and C. Shen, <i>IEEE International Conference on Blockchain (Blockchain 2019)</i>, Atlanta, USA, July 14-17, 2019</li>
+
+            <li><span class="pub-title">A Blockchain-based Architecture for Traffic Signal Control Systems</span> [<a href="https://doi.org/10.1109/ICIOT.2019.00018" target="_blank">DOI</a> / <a href="files/A_Blockchain-Based_Architecture_for_Traffic_Signal_Control_Systems.pdf" target="_blank">PDF</a>]<br>
+            W. Li, M. Nejad and R. Zhang, <i>IEEE International Congress on Internet of Things (ICIOT 2019)</i>, Milano, Italy, July 8-13, 2019</li>
+        </ol>
+    </section>
+
+    <section id="goto_students">
+        <h2>Student Advising</h2>
+        <h3>Current Students</h3>
+        <div style="margin-left: 20px;">
+            <b>Graduate Students:</b> Yetong Wang, Zhenhao Song <br>
+            <b>Undergraduate Students:</b> Xiang Li, Wufan Sun, Zhengxu Jing, Zezheng Liu
+        </div>
+
+        <h3>Former Students</h3>
+        <div style="margin-left: 20px; margin-bottom: 20px;">
+            <b>Graduate Students (11):</b> Jiaxuan Li (MS, 2025), Jiachen Wang (MS, 2025), Zijie Wang (MS, 2025), Tianyou Wang (MS, 2025), Xuan Wang (MS, 2025), Diyang Zhu (MS, 2025), Yujun Deng (MS, 2024), Sheng Fang (MS, 2024), Wenze Xiong (MS, 2024, University of Auckland, NZ), Yiran Tian (MS, 2024), Yutong Zhang (MS, 2024)
+        </div>
+        <div style="margin-left: 20px;">
+            <b>Undergraduate Students (8):</b> Fazhi Chen (BS, 2025), Jiayun Yu (BS, 2024, Georgetown University, USA), Yuntao Nie (BS, 2023), Yetong Wang (BS, 2023, Australian National University, AU), Bo Wang (BS, 2023), Wenrui Liu (BS, 2023, University College London, UK), Haoyu Wang (BS, 2023), Bocheng Zhang (BS, 2023, University of Edinburgh, UK)
+        </div>
+    </section>
+
+    <section id="goto_awards">
+        <h2>Awards and Honors</h2>
+        <ul>
             <li>Jiangsu Province Science and Technology Youth Talent Promotion Program, JSAST, 2025</li>
             <li>National Web3.0 Innovation Hackathon Bronze Award (Hong Kong Division), 2024</li>
             <li>Fellowship of the UK Higher Education Academy (FHEA), 2024</li>
@@ -439,14 +559,61 @@
             <li>Professional Development Award, University of Delaware, 2019</li>
             <li>Excellent Graduate Leadership, Chongqing University, 2015</li>
             <li>Yangtze Power Scholarship, China Yangtze Power, 2014</li>
-         </ul>
-      </font>
-      <br>
-      <br>
-      <center><font face="Arial" style="font-size: 16px"><a href="#top">Back to Top</a></font></center>
-      <br>
-      <center><font face="Arial" style="font-size: 16px">&copy; Created by Wanxin Li and updated in 2025.</font></center>
-      <br>
-      </div>
-   </body>
+        </ul>
+    </section>
+
+    <section id="goto_explore" class="mood-section">
+        <h2>Explore the mood...</h2>
+
+        <div class="mood-scroll-wrapper">
+            <div class="scroll-arrow arrow-left" id="scrollLeft">&#10094;</div>
+            <div class="scroll-arrow arrow-right" id="scrollRight">&#10095;</div>
+
+            <div class="mood-scroll-container" id="moodContainer">
+                <div class="mood-item"><img src="mood/museum.jpg" alt="Collection 1" loading="lazy"></div>
+                <div class="mood-item"><img src="mood/airjordan1.jpg" alt="Collection 2" loading="lazy"></div>
+                <div class="mood-item"><img src="mood/pokemon.jpg" alt="Collection 3" loading="lazy"></div>
+                <div class="mood-placeholder">Coming Soon...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#top">Back to Top</a><br><br>
+        &copy; Created by Wanxin Li. Updated in 2026.
+    </footer>
+</div>
+
+<script>
+    // News Toggle Logic
+    document.getElementById('toggle-earlier-news').addEventListener('click', function(e) {
+        e.preventDefault();
+        var newsDiv = document.getElementById('earlier-news');
+        if (newsDiv.style.display === 'none' || newsDiv.style.display === '') {
+            newsDiv.style.display = 'block';
+            this.textContent = 'Hide Archived.';
+        } else {
+            newsDiv.style.display = 'none';
+            this.textContent = 'Archived.';
+        }
+    });
+
+    // Mood Wall: Manual Arrow Navigation ONLY
+    const scrollContainer = document.getElementById('moodContainer');
+    const btnLeft = document.getElementById('scrollLeft');
+    const btnRight = document.getElementById('scrollRight');
+
+    const step = 300; // Manual scroll distance
+
+    // Manual Navigation Click
+    btnLeft.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+
+    btnRight.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: step, behavior: 'smooth' });
+    });
+</script>
+
+</body>
 </html>
