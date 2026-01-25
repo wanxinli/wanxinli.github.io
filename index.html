@@ -15,7 +15,7 @@
             --text-main: #2C2C2C;
             --text-muted: #555555;
             --accent: #8C7851;
-            --border-color: #E2DFD5;
+            --border-color: #C8C5BB;
             --link-hover: #C5A059;
             --award-red: #D70040;
             --stat-green: #228B22;
@@ -25,7 +25,8 @@
         }
 
         html {
-            scroll-behavior: smooth;
+            /* 关键修复 1：强制显示垂直滚动条，防止切换 Tab 时页面左右跳动 */
+            overflow-y: scroll;
         }
 
         body {
@@ -40,13 +41,24 @@
         .content-container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 60px 40px;
+            /* 顶部 padding 设为 0，让 sticky 导航栏能紧贴窗口顶部 */
+            padding: 0 40px;
+            min-height: 100vh; /* 保证页面高度 */
+            display: flex;
+            flex-direction: column;
         }
 
-        /* 统一板块间距与导航跳转位置 */
+        /* Section 默认隐藏，通过JS控制显示 */
         section {
-            scroll-margin-top: 120px;
-            margin-bottom: 80px;
+            display: none; /* 默认不显示 */
+            margin-bottom: 40px;
+            /* 出现时的淡入动画 */
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Header */
@@ -54,9 +66,9 @@
             display: flex;
             align-items: stretch;
             gap: 50px;
-            margin-bottom: 60px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
         .profile-photo img {
@@ -106,14 +118,21 @@
 
         /* Navigation */
         #nav-container {
+            /* 启用 sticky 定位 */
             position: sticky;
             top: 0;
-            background-color: rgba(249, 247, 242, 0.95);
-            backdrop-filter: blur(8px);
-            z-index: 100;
-            margin: 0 -40px 60px -40px;
-            padding: 20px 40px;
-            border-bottom: 1px solid var(--border-color);
+
+            background-color: var(--bg-color);
+            z-index: 1000; /* 确保层级在最上面 */
+            margin: 0 -40px 40px -40px; /* 保持负margin拉通 */
+
+            /* 上下 Padding */
+            padding: 15px 40px;
+
+            /* 上下同时加粗边框 */
+            border-top: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+
             text-align: center;
         }
 
@@ -134,9 +153,27 @@
             letter-spacing: 1.5px;
             font-weight: 700;
             transition: 0.3s;
+            padding: 5px 0; /* 增加一点点击区域 */
+            position: relative;
         }
 
         .bmenu li a:hover { color: var(--accent); }
+
+        /* 选中状态的样式 */
+        .bmenu li a.active {
+            color: var(--accent);
+        }
+        /* 选中状态下方加个小点缀 */
+        .bmenu li a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
 
         /* Typography */
         h2 {
@@ -175,7 +212,7 @@
         li { margin-bottom: 12px; }
 
         .pub-title { font-weight: bold; color: var(--text-main); }
-        .award-tag { color: var(--award-red); font-weight: normal; }
+        .award-tag { color: var(--award-red); font-weight: bold; font-size: 0.9rem; }
         .stat-tag { color: var(--stat-green); font-weight: bold; font-size: 0.9rem; }
 
         .earlier-news { display: none; background: #F0EEE7; padding: 20px; margin-top: 20px; border-radius: 4px; }
@@ -197,7 +234,6 @@
             padding-bottom: 20px;
             scroll-behavior: smooth;
             width: 100%;
-            /* 隐藏原生滚动条 */
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
@@ -235,7 +271,6 @@
             font-size: 1.1rem;
         }
 
-        /* 滚动箭头样式 */
         .scroll-arrow {
             position: absolute;
             top: 50%;
@@ -270,12 +305,16 @@
         .arrow-right { right: 10px; }
 
         footer {
-            margin-top: 20px;
-            padding: 60px 0;
-            border-top: 1px solid var(--border-color);
+            margin-top: auto; /* Push footer to bottom */
+            padding: 30px 0; /* 调整padding */
             text-align: center;
             font-size: 0.9rem;
             color: var(--text-muted);
+
+            /* 底部横线与导航栏一致 */
+            margin-left: -40px;
+            margin-right: -40px;
+            border-top: 2px solid var(--border-color);
         }
 
         @media (max-width: 768px) {
@@ -283,8 +322,6 @@
             .profile-photo img { width: 150px; height: 200px; }
             .bmenu { gap: 15px; flex-wrap: wrap; }
             .mood-item, .mood-placeholder { flex: 0 0 240px; }
-            section { scroll-margin-top: 160px; }
-            /* 手机端隐藏箭头，直接触摸滑动 */
             .scroll-arrow { display: none; }
         }
     </style>
@@ -292,45 +329,44 @@
 <body>
 
 <div class="content-container">
-    <a name="top"></a>
-
-    <header class="profile-header">
-        <div class="profile-photo">
-            <img src="images/New43.jpg" alt="Wanxin Li">
-        </div>
-        <div class="header-info">
-            <div>
-                <h1>Wanxin Li</h1>
-                <div class="sub-title">Assistant Professor</div>
-                <div class="contact-box">
-                    Department of Communications and Networking<br>
-                    Xi'an Jiaotong-Liverpool University (XJTLU)<br>
-                    Suzhou Industrial Park, China<br>
-                    Office: EE218, SIP Campus<br>
-                    Email: wanxin.li_at_xjtlu.edu.cn / wanxin.li_at_liverpool.ac.uk
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="https://scholar.google.com/citations?user=MFIrVhQAAAAJ&hl=en" target="_blank">Google Scholar</a> /
-                <a href="https://www.linkedin.com/in/wanxinli" target="_blank">LinkedIn</a> /
-                <a href="https://scholar.xjtlu.edu.cn/en/persons/WanxinLi" target="_blank">XJTLU Page</a>
-            </div>
-        </div>
-    </header>
 
     <nav id="nav-container">
         <ul class="bmenu">
-            <li><a href="#goto_about">About</a></li>
-            <li><a href="#goto_news">News</a></li>
-            <li><a href="#goto_services">Services</a></li>
-            <li><a href="#goto_publications">Publications</a></li>
-            <li><a href="#goto_students">Students</a></li>
-            <li><a href="#goto_awards">Awards</a></li>
-            <li><a href="#goto_explore">Explore</a></li>
+            <li><a href="#" data-target="goto_about" class="nav-link active">About</a></li>
+            <li><a href="#" data-target="goto_news" class="nav-link">News</a></li>
+            <li><a href="#" data-target="goto_services" class="nav-link">Services</a></li>
+            <li><a href="#" data-target="goto_publications" class="nav-link">Publications</a></li>
+            <li><a href="#" data-target="goto_students" class="nav-link">Students</a></li>
+            <li><a href="#" data-target="goto_awards" class="nav-link">Awards</a></li>
+            <li><a href="#" data-target="goto_explore" class="nav-link">Explore</a></li>
         </ul>
     </nav>
 
     <section id="goto_about">
+        <header class="profile-header">
+            <div class="profile-photo">
+                <img src="images/New43.jpg" alt="Wanxin Li">
+            </div>
+            <div class="header-info">
+                <div>
+                    <h1>Wanxin Li</h1>
+                    <div class="sub-title">Assistant Professor</div>
+                    <div class="contact-box">
+                        Department of Communications and Networking<br>
+                        Xi'an Jiaotong-Liverpool University (XJTLU)<br>
+                        Suzhou Industrial Park, China<br>
+                        Office: EE218, SIP Campus<br>
+                        Email: wanxin.li_at_xjtlu.edu.cn / wanxin.li_at_liverpool.ac.uk
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=MFIrVhQAAAAJ&hl=en" target="_blank">Google Scholar</a> /
+                    <a href="https://www.linkedin.com/in/wanxinli" target="_blank">LinkedIn</a> /
+                    <a href="https://scholar.xjtlu.edu.cn/en/persons/WanxinLi" target="_blank">XJTLU Page</a>
+                </div>
+            </div>
+        </header>
+
         <h2>About Me</h2>
         <p>Hello! I am currently an assistant professor in the Department of Communications and Networking at XJTLU. My research areas include blockchain technology, federated learning, and security & privacy. Before XJTLU, I received my doctoral & master's degrees from the University of Delaware in the US and my bachelor's degree from Chongqing University in China. I also hold a postgraduate certificate in Education from the University of Liverpool and a fellowship from the Higher Education Academy in the UK. In my free hours, I enjoy hip-hop music and a few vintage collections.</p>
     </section>
@@ -387,7 +423,7 @@
     </section>
 
     <section id="goto_services">
-        <h2>Services</h2>
+        <h2>Academic Services</h2>
         <h3>Editorial Board Member</h3>
         <ul><li>Guest Lead Editor of IET Blockchain, Special Issue: Blockchain Evolution: Architecture and Applications, vol. 5, 2025</li></ul>
 
@@ -572,20 +608,19 @@
             <div class="mood-scroll-container" id="moodContainer">
                 <div class="mood-item"><img src="mood/museum.jpg" alt="Collection 1" loading="lazy"></div>
                 <div class="mood-item"><img src="mood/airjordan1.jpg" alt="Collection 2" loading="lazy"></div>
-                <div class="mood-item"><img src="mood/pokemon.jpg" alt="Collection 3" loading="lazy"></div>
+                <div class="mood-item"><img src="mood/pokemon.jpg" alt="Collection 3" loading="lazy"></div>                              
                 <div class="mood-placeholder">Coming Soon...</div>
             </div>
         </div>
     </section>
 
     <footer>
-        <a href="#top">Back to Top</a><br><br>
         &copy; Created by Wanxin Li. Updated in 2026.
     </footer>
 </div>
 
 <script>
-    // News Toggle Logic
+    // 1. News Toggle Logic (原有功能)
     document.getElementById('toggle-earlier-news').addEventListener('click', function(e) {
         e.preventDefault();
         var newsDiv = document.getElementById('earlier-news');
@@ -598,20 +633,64 @@
         }
     });
 
-    // Mood Wall: Manual Arrow Navigation ONLY
+    // 2. Mood Wall (原有功能)
     const scrollContainer = document.getElementById('moodContainer');
     const btnLeft = document.getElementById('scrollLeft');
     const btnRight = document.getElementById('scrollRight');
+    const step = 300;
 
-    const step = 300; // Manual scroll distance
-
-    // Manual Navigation Click
     btnLeft.addEventListener('click', () => {
         scrollContainer.scrollBy({ left: -step, behavior: 'smooth' });
     });
 
     btnRight.addEventListener('click', () => {
         scrollContainer.scrollBy({ left: step, behavior: 'smooth' });
+    });
+
+    // 3. 导航栏切换逻辑 (原有功能)
+    document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        // 初始化显示函数
+        function showSection(targetId) {
+            // 隐藏所有 Section
+            sections.forEach(sec => {
+                sec.style.display = 'none';
+            });
+
+            // 移除所有链接的 active 状态
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // 显示目标 Section
+            const targetSection = document.getElementById(targetId);
+            if(targetSection) {
+                targetSection.style.display = 'block';
+            }
+
+            // 激活对应链接样式
+            const activeLink = document.querySelector(`.nav-link[data-target="${targetId}"]`);
+            if(activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            // 切换后回到顶部（提升体验）
+            window.scrollTo(0, 0);
+        }
+
+        // 绑定点击事件
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                showSection(targetId);
+            });
+        });
+
+        // 默认显示 About
+        showSection('goto_about');
     });
 </script>
 
