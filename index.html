@@ -36,6 +36,21 @@
             font-family: 'Lora', serif;
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
+
+            /* --- 修改：已移除全局 user-select: none，允许选中文字 --- */
+        }
+
+        /* --- 修改：仅禁止图片被选中和拖拽 --- */
+        img {
+            -webkit-user-drag: none;   /* 禁止拖动图片 */
+            user-drag: none;
+
+            -webkit-user-select: none; /* 禁止选中图片(变蓝) */
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            pointer-events: auto;      /* 保持鼠标交互 */
         }
 
         .content-container {
@@ -508,7 +523,7 @@
             <li><span class="pub-title">A Hierarchical and Location-aware Consensus Protocol for IoT-Blockchain Applications</span> [<a href="https://doi.org/10.1109/TNSM.2022.3176607" target="_blank">DOI</a> / <a href="files/TNSM3176607.pdf" target="_blank">PDF</a>]<br>
             H. Guo, W. Li* and M. Nejad, <i>IEEE Transactions on Network and Service Management</i>, vol. 19, no. 3, pp. 2972-2986, Sept. 2022 &#8690; <span class="stat-tag">JCR Q1, CAS Tier 2, CCF C, IF 5.3</span></li>
 
-            <li><span class="pub-title">Proof-of-Event Recording System for Autonomous Vehicles: A Blockchain-based Solution</span> [<a href="https://doi.org/10.1109/ACCESS.2020.3029512" target="_blank">DOI</a> / <a href="files/ACCESS3029512.pdf" target="_blank">PDF</a>]<br>
+            <li><span class="pub-title">Proof-of-Event Recording System for Autonomous Vehicles: A Blockchain-based Solution</span> [<a href="https://doi.org/10.1109/ACCESS.2020.3029512" target="_blank">DOI</a> / <a href="files/ACCESS3028189.pdf" target="_blank">PDF</a>]<br>
             H. Guo, W. Li, M. Nejad and C. Shen, <i>IEEE Access</i>, vol. 8, pp. 182776-182786, Oct. 2020 &#8690; JCR Q2, CAS Tier 3, IF 3.745</li>
 
             <li><span class="pub-title">Privacy-Preserving Traffic Management: A Blockchain and Zero-Knowledge Proof Inspired Approach</span> [<a href="https://doi.org/10.1109/ACCESS.2020.3028189" target="_blank">DOI</a> / <a href="files/ACCESS3028189.pdf" target="_blank">PDF</a>]<br>
@@ -620,7 +635,59 @@
 </div>
 
 <script>
-    // 1. News Toggle Logic (原有功能)
+    // === Security Measures: Prevent Download & Source View ===
+
+    // 1. 禁止右键菜单 (Disable Right Click)
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // 2. 禁止常用快捷键 (Disable Shortcuts)
+    document.addEventListener('keydown', function(e) {
+        // F12 (DevTools)
+        if(e.key === 'F12' || e.keyCode === 123) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+I (DevTools Inspect)
+        if(e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+J (DevTools Console)
+        if(e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j')) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+C (DevTools Element Select)
+        if(e.ctrlKey && e.shiftKey && (e.key === 'C' || e.key === 'c')) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+U (View Source)
+        if(e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+S (Save Page)
+        if(e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // 3. 禁止拖拽图片 (Disable Image Dragging)
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    });
+
+
+    // === Original Functionality Below ===
+
+    // 1. News Toggle Logic
     document.getElementById('toggle-earlier-news').addEventListener('click', function(e) {
         e.preventDefault();
         var newsDiv = document.getElementById('earlier-news');
@@ -633,7 +700,7 @@
         }
     });
 
-    // 2. Mood Wall (原有功能)
+    // 2. Mood Wall
     const scrollContainer = document.getElementById('moodContainer');
     const btnLeft = document.getElementById('scrollLeft');
     const btnRight = document.getElementById('scrollRight');
@@ -647,40 +714,24 @@
         scrollContainer.scrollBy({ left: step, behavior: 'smooth' });
     });
 
-    // 3. 导航栏切换逻辑 (原有功能)
+    // 3. 导航栏切换逻辑
     document.addEventListener("DOMContentLoaded", function() {
         const links = document.querySelectorAll('.nav-link');
         const sections = document.querySelectorAll('section');
 
-        // 初始化显示函数
         function showSection(targetId) {
-            // 隐藏所有 Section
-            sections.forEach(sec => {
-                sec.style.display = 'none';
-            });
+            sections.forEach(sec => sec.style.display = 'none');
+            links.forEach(link => link.classList.remove('active'));
 
-            // 移除所有链接的 active 状态
-            links.forEach(link => {
-                link.classList.remove('active');
-            });
-
-            // 显示目标 Section
             const targetSection = document.getElementById(targetId);
-            if(targetSection) {
-                targetSection.style.display = 'block';
-            }
+            if(targetSection) targetSection.style.display = 'block';
 
-            // 激活对应链接样式
             const activeLink = document.querySelector(`.nav-link[data-target="${targetId}"]`);
-            if(activeLink) {
-                activeLink.classList.add('active');
-            }
+            if(activeLink) activeLink.classList.add('active');
 
-            // 切换后回到顶部（提升体验）
             window.scrollTo(0, 0);
         }
 
-        // 绑定点击事件
         links.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -689,7 +740,6 @@
             });
         });
 
-        // 默认显示 About
         showSection('goto_about');
     });
 </script>
