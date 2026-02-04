@@ -621,15 +621,8 @@
             <div class="scroll-arrow arrow-right" id="scrollRight">&#10095;</div>
 
             <div class="mood-scroll-container" id="moodContainer">
-                <!-- <div class="mood-item"><img src="mood/jordan and kobe.jpg" loading="lazy"></div> -->
-                <div class="mood-item"><img src="mood/nyc1.jpg" loading="lazy"></div>
-                <div class="mood-item"><img src="mood/nyc2.jpg" loading="lazy"></div>
-                <!-- <div class="mood-item"><img src="mood/travis.jpg" loading="lazy"></div> -->
-                <!-- <div class="mood-item"><img src="mood/airjordan1s.jpg" loading="lazy"></div> -->
                 <div class="mood-item"><img src="mood/pokemon.jpg" loading="lazy"></div>
-                <!-- <div class="mood-item"><img src="mood/topgear.jpg" loading="lazy"></div>
-                <div class="mood-item"><img src="mood/redwing.jpg" loading="lazy"></div>
-                <div class="mood-item"><img src="mood/zelda.jpg" loading="lazy"></div>-->
+                <div class="mood-item"><img src="mood/offwhite.jpg" loading="lazy"></div>
                 <div class="mood-placeholder">Coming Soon...</div>
             </div>
         </div>
@@ -721,33 +714,58 @@
     });
 
     // 3. 导航栏切换逻辑
-    document.addEventListener("DOMContentLoaded", function() {
-        const links = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section');
+        document.addEventListener("DOMContentLoaded", function() {
 
-        function showSection(targetId) {
-            sections.forEach(sec => sec.style.display = 'none');
-            links.forEach(link => link.classList.remove('active'));
-
-            const targetSection = document.getElementById(targetId);
-            if(targetSection) targetSection.style.display = 'block';
-
-            const activeLink = document.querySelector(`.nav-link[data-target="${targetId}"]`);
-            if(activeLink) activeLink.classList.add('active');
-
+            // 1. 【核心修改】强制禁止浏览器自动恢复滚动位置
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
             window.scrollTo(0, 0);
-        }
 
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('data-target');
-                showSection(targetId);
+            const links = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            // --- 核心显示函数 ---
+            function showSection(targetId) {
+                if (!document.getElementById(targetId)) return;
+
+                sections.forEach(sec => sec.style.display = 'none');
+                links.forEach(link => link.classList.remove('active'));
+
+                const targetSection = document.getElementById(targetId);
+                if(targetSection) targetSection.style.display = 'block';
+
+                const activeLink = document.querySelector(`.nav-link[data-target="${targetId}"]`);
+                if(activeLink) activeLink.classList.add('active');
+
+                // 切换 Tab 时也强制滚回顶部
+                window.scrollTo(0, 0);
+            }
+
+            // --- 路由处理函数 ---
+            function handleRouting() {
+                const hash = window.location.hash.substring(1);
+                if (hash && document.getElementById(hash)) {
+                    showSection(hash);
+                } else {
+                    showSection('goto_about');
+                }
+            }
+
+            // --- 事件监听 ---
+            window.addEventListener('hashchange', handleRouting);
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('data-target');
+                    window.location.hash = targetId;
+                });
             });
-        });
 
-        showSection('goto_about');
-    });
+            // 初始化
+            handleRouting();
+        });
 </script>
 
 </body>
