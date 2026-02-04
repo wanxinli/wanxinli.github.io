@@ -716,38 +716,45 @@
     // 3. 导航栏切换逻辑
         document.addEventListener("DOMContentLoaded", function() {
 
-            // 1. 【核心修改】强制禁止浏览器自动恢复滚动位置
+            // 1. 禁用浏览器自动恢复滚动位置
             if ('scrollRestoration' in history) {
                 history.scrollRestoration = 'manual';
             }
-            window.scrollTo(0, 0);
 
             const links = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('section');
 
             // --- 核心显示函数 ---
             function showSection(targetId) {
+                // 安全检查
                 if (!document.getElementById(targetId)) return;
 
+                // 隐藏所有 Section
                 sections.forEach(sec => sec.style.display = 'none');
                 links.forEach(link => link.classList.remove('active'));
 
+                // 显示目标 Section
                 const targetSection = document.getElementById(targetId);
                 if(targetSection) targetSection.style.display = 'block';
 
+                // 激活对应导航链接
                 const activeLink = document.querySelector(`.nav-link[data-target="${targetId}"]`);
                 if(activeLink) activeLink.classList.add('active');
 
-                // 切换 Tab 时也强制滚回顶部
-                window.scrollTo(0, 0);
+                // 【关键修改】使用 setTimeout 将“滚回顶部”推迟到浏览器默认动作之后执行
+                // 这能强制覆盖浏览器“跳转到锚点”的行为，避免标题被导航栏遮挡
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                }, 10);
             }
 
-            // --- 路由处理函数 ---
+            // --- 路由处理 ---
             function handleRouting() {
                 const hash = window.location.hash.substring(1);
                 if (hash && document.getElementById(hash)) {
                     showSection(hash);
                 } else {
+                    // 如果没有 hash，默认显示 About
                     showSection('goto_about');
                 }
             }
@@ -759,13 +766,15 @@
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('data-target');
+                    // 修改 hash 触发路由切换
                     window.location.hash = targetId;
                 });
             });
 
-            // 初始化
+            // 初始化执行
             handleRouting();
         });
+
 </script>
 
 </body>
